@@ -1,0 +1,17 @@
+.portfolio {
+  /* background: #101825; */
+  color: #fff;
+
+}
+
+.tabs {
+  /* border-bottom: 1px solid #0e0e0e; */
+  background: #192331;
+  border-radius: 4px;
+}
+.card {
+  background: #192331 !important;
+  color: #fff !important;
+}
+
+/* Responsive For Mobile Phone */

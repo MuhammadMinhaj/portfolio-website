@@ -1,0 +1,28 @@
+.footer {
+  min-height: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .copyright {
+  text-align: center;
+}
+.footer .copyright span {
+  line-height: 1.75;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 576px) {
+  .footer {
+    flex-direction: column;
+    padding: 10px 0px;
+  }
+  .footer .resume {
+    margin: 20px 0px;
+  }
+  .footer .copyright span {
+    letter-spacing: 1px;
+  }
+}
