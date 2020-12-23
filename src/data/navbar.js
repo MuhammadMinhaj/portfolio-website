@@ -20,6 +20,7 @@ const navbar = [
   createNavbarObject("Home", "/"),
   createNavbarObject("About", "#about"),
   createNavbarObject("Skills", "#skills"),
+  createNavbarObject("Portfolio", "#portfolio"),
   createNavbarObject("Services", "#services"),
   createNavbarObject("Contact", "#contact"),
   createNavbarObject("Blog", "/blog"),

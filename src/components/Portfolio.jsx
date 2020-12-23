@@ -20,16 +20,14 @@ import {
   CardActionArea,
   CardActions,
   CardContent,
-  CardMedia,
   Button,
   Grid,
   Chip,
 } from "@material-ui/core";
-
+import { Pagination } from "@material-ui/lab";
 // Included Material-Icons
 import {
   GitHub as GitHubIcon,
-  Visibility as VisibilityIcon,
   VisibilityOff as VisibilityOffIcon,
   Public as PublicIcon,
 } from "@material-ui/icons";
@@ -37,9 +35,12 @@ import {
 // Included custom packages or components or others...
 import styled from "../../styles/portfolio.module.css";
 
+// Add redux actions
+import app from "../../redux/actions/app";
 // Included Portfolio Data
 import data from "../data";
 
+const { getFilterArray, getTotalPageNumber } = app.portfolio;
 const { portfolio } = data;
 
 const InfoText = ({ name, value, isDescription }) => (
@@ -152,18 +153,28 @@ const PortfolioCard = ({
 PortfolioCard.propTypes = {
   project: PropTypes.object.isRequired,
 };
+
 const Portfolio = () => {
   const [value, setValue] = useState(0);
+  const [page, setPage] = useState(1);
   const isMobileDevice = useMediaQuery("(max-width:576px)");
-  const handleChange = (event, newValue) => {
+  const projects = portfolio[value].projects;
+  const itemPerPage = 6;
+
+  const handleChangeTabs = (event, newValue) => {
     setValue(newValue);
+    setPage(1);
   };
+  const handleChangePaginate = (event, page) => {
+    setPage(page);
+  };
+
   return (
-    <section className={styled.portfolio}>
+    <section id="portfolio" className={styled.portfolio}>
       <Tabs
         variant={isMobileDevice ? "scrollable" : "fullWidth"}
         value={value}
-        onChange={handleChange}
+        onChange={handleChangeTabs}
         aria-label="Portfolio tabs"
         className={styled.tabs}
         scrollButtons="on"
@@ -175,17 +186,33 @@ const Portfolio = () => {
 
       <Box py={3}>
         <Grid container spacing={3}>
-          {portfolio[value].projects &&
-            portfolio[value].projects.map((project, i) => (
+          {projects &&
+            getFilterArray(projects, itemPerPage, page).map((project, i) => (
               <PortfolioCard project={project} key={i} />
             ))}
         </Grid>
       </Box>
 
-      <div style={{ textAlign: "center" }}>
-        <Button color="secondary" variant="outlined" size="large">
-          See More
-        </Button>
+      <div
+        style={{
+          textAlign: "center",
+          display: "flex",
+          justifyContent: "center",
+          color: "#fff!important",
+        }}
+      >
+        {projects.length > itemPerPage && (
+          <Pagination
+            page={page}
+            count={getTotalPageNumber(projects.length / itemPerPage)}
+            onChange={handleChangePaginate}
+            siblingCount={0}
+            size={isMobileDevice ? "medium" : "large"}
+            color="secondary"
+            shape="rounded"
+            variant="outlined"
+          />
+        )}
       </div>
     </section>
   );

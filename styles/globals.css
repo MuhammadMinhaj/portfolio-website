@@ -58,3 +58,6 @@ input,
 textarea {
   color: #fff !important;
 }
+.MuiPaginationItem-root{
+  color:#fff!important
+}

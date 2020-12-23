@@ -22,9 +22,10 @@ const app = {
   loader: {},
   contact: {},
   skills: {},
+  portfolio: {},
 };
 
-const { alertMessage, contact, skills } = app;
+const { alertMessage, contact, skills, portfolio } = app;
 
 // Start here to functions of Header...
 app.handleNavAnimationBar = () => {
@@ -159,4 +160,27 @@ contact.handleSubmit = (e) => {
     }
   };
 };
+
+// Start here to methods of Portfolio
+
+// This methods for array filter to paginated items
+portfolio.getFilterArray = (list, itemPerPage, currentPage) => {
+  if (list.length <= itemPerPage) {
+    return list;
+  }
+  return list.slice(
+    itemPerPage * currentPage - itemPerPage,
+    itemPerPage * currentPage
+  );
+};
+
+const isFloat = (n) => Number(n) === n && n % 1 !== 0;
+// This methods for get the total pages number with round future for pages number
+portfolio.getTotalPageNumber = (pages) => {
+  if (isFloat(pages)) {
+    return parseInt(pages + 1);
+  }
+  return pages;
+};
+
 export default app;
