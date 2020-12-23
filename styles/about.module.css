@@ -1,7 +1,7 @@
 .about__section .about__text {
   padding: 4rem 2rem;
-  color: #fff;
-  background: #101825;
+  color: var(--text);
+  background: var(--front);
   border-radius: 1rem;
 }
 .about__section .about__text .button__wrapper {

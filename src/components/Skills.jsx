@@ -82,7 +82,7 @@ const useColorlibStepIconStyles = makeStyles({
   root: {
     backgroundColor: "#ccc",
     zIndex: 1,
-    color: "#fff",
+    color: "var(--text)",
     width: 50,
     height: 50,
     display: "flex",
@@ -159,7 +159,7 @@ const SkillsItem = () => {
             <>
               <div style={{ textAlign: "right" }}>
                 <IconButton
-                  style={{ padding: "2px" }}
+                  style={{ padding: "2px", color: "var(--muted)" }}
                   onClick={() => dispatch(handleModal(null))}
                 >
                   <CloseIcon />
@@ -168,6 +168,7 @@ const SkillsItem = () => {
               <h1 className={styled.backgroundTitle}>
                 {skillList[activeStep][index].progress}
               </h1>
+
               <Image
                 src={"/" + skillList[activeStep][index].src}
                 alt={skillList[activeStep][index].title}
@@ -177,16 +178,17 @@ const SkillsItem = () => {
               <h2>{skillList[activeStep][index].title}</h2>
 
               <p>{skillList[activeStep][index].text}</p>
-              <a href={skillList[activeStep][index].url} target="blank">
-                <Button
-                  startIcon={<ChevronRightIcon />}
-                  style={{ marginTop: "1rem" }}
-                  variant="contained"
-                  color="primary"
-                >
-                  More Details
-                </Button>
-              </a>
+
+              <Button
+                startIcon={<ChevronRightIcon />}
+                style={{ marginTop: "1rem" }}
+                variant="outlined"
+                color="secondary"
+                href={skillList[activeStep][index].url}
+                target="blank"
+              >
+                More Details
+              </Button>
             </>
           )}
         </div>
@@ -251,7 +253,7 @@ const Skills = () => {
               onClick={() => dispatch(stepHandleClick(index))}
             >
               <StepLabel StepIconComponent={ColorlibStepIcon}>
-                <span style={{ color: "#fff" }}>{label}</span>
+                <span style={{ color: "var(--text)" }}>{label}</span>
               </StepLabel>
             </StepButton>
           </Step>

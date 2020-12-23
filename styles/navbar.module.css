@@ -45,7 +45,7 @@
     /* display: block; */
     width: 180px;
     height: 100%;
-    background: var(--theme);
+    background: var(--bg);
     margin: 0;
     padding: 0;
     flex-direction: column;
@@ -68,7 +68,7 @@
   .closeIcon {
     text-align: center;
     padding: 10px;
-    background: var(--theme);
+    background: var(--bg);
     border-bottom: 1px solid #0000003d;
     color: white;
   }

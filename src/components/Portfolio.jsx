@@ -6,7 +6,6 @@
  * **/
 
 // Included third pertty packages or components
-
 import { useState } from "react";
 import Image from "next/image";
 import PropTypes from "prop-types";
@@ -116,32 +115,30 @@ const PortfolioCard = ({
                     label={t}
                     variant="outlined"
                     size="small"
-                    style={{ marginRight: "0.25rem", color: "#bdbdbd" }}
+                    className={styled.chip}
                   />
                 ))}
           </CardContent>
         </CardActionArea>
-        <CardActions
-          style={{ borderTop: "1px solid #111a28", padding: "0.80rem 0.60rem" }}
-        >
+        <CardActions className={styled.cardActions}>
           <Button
             startIcon={url ? <PublicIcon /> : <VisibilityOffIcon />}
             variant="outlined"
-            style={{ color: "#fff" }}
             color="secondary"
             disabled={url ? false : true}
             href={url}
             target="blank"
+            className={styled.btn}
           >
             Live
           </Button>
           <Button
             startIcon={<GitHubIcon />}
             variant="outlined"
-            style={{ color: "#fff" }}
             disabled={sourceCode ? false : true}
             href={sourceCode}
             target="blank"
+            className={styled.btn}
           >
             Source
           </Button>
@@ -193,14 +190,7 @@ const Portfolio = () => {
         </Grid>
       </Box>
 
-      <div
-        style={{
-          textAlign: "center",
-          display: "flex",
-          justifyContent: "center",
-          color: "#fff!important",
-        }}
-      >
+      <div className={styled.pagination}>
         {projects.length > itemPerPage && (
           <Pagination
             page={page}

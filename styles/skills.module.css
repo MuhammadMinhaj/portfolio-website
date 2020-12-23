@@ -1,3 +1,4 @@
+/* It's was skill middle line color code : #38299b; */
 /* Skills Style */
 .skillsContainer {
   display: flex;
@@ -7,37 +8,33 @@
 }
 .description {
   max-width: 300px;
-  box-shadow: 0pt 0pt 3pt 0pt #00002540;
   padding: 1rem;
   margin: auto;
-  background: white;
+  background: var(--front);
   border-radius: 0.5rem;
   transform: translateY(25%);
-  color: #384950;
-  font-family: arial;
+  color: var(--muted);
   position: relative;
   outline: none;
 }
 .description .backgroundTitle {
   font-size: 3.5rem;
   position: absolute;
-  top: 8%;
-  left: 1%;
+  top: 5%;
+  left: 0%;
   z-index: -999;
   transform: rotate(-45deg);
-  color: #a4a8ad;
+  color: var(--muted);
 }
 
 .description > h2 {
-  margin-bottom: 0.25rem;
-  color: #194257;
+  margin-bottom: 0.5rem;
+  color: var(--text);
 }
-.description > a {
-  text-decoration: none;
-}
+
 .skillsContainer .line {
   width: 12%;
-  border: 5px solid #38299b;
+  border: 5px solid var(--front);
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -46,8 +43,7 @@
 .skillsContainer .line > h1 {
   transform: rotate(90deg);
   letter-spacing: 20px;
-  color: #dde0e2;
-  font-family: arial;
+  color: var(--muted);
 }
 .skillsContainer .left,
 .right {
@@ -69,15 +65,15 @@
 /* Color Code */
 .skillsContainer .right .item .icon {
   border-left: none;
-  border-right: 5px solid #38299b;
+  border-right: 5px solid var(--front);
   border-radius: 0px 10px 10px 0px;
 }
 .skillsContainer .left .item .icon,
 .right .item .icon {
   width: 100%;
   height: 100%;
-  background: var(--theme);
-  border: 5px solid#38299b;
+  background: var(--bg);
+  border: 5px solid var(--front);
   border-right: none;
   border-radius: 10px 0px 0px 10px;
   z-index: 1000;
@@ -89,7 +85,7 @@
 }
 .skillsContainer .left .item .icon:hover,
 .right .item .icon:hover {
-  background: #2a323e;
+  background: var(--front);
   transition: all 0.25s;
   cursor: pointer;
 }
@@ -115,7 +111,7 @@
 .skillsContainer .left .item .content > h1,
 .right .item .content > h1 {
   margin-left: 20%;
-  color: #fff;
+  color: var(--text);
 }
 .skillsContainer .left .item .content {
   right: 50%;

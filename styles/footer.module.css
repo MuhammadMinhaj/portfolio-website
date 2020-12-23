@@ -1,19 +1,14 @@
 .footer {
   min-height: 100px;
-  color: #fff;
+  color: var(--text);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer .copyright {
+.footer .social{
   text-align: center;
 }
-.footer .copyright span {
-  line-height: 1.75;
-  font-size: 14px;
-}
-
 @media only screen and (max-width: 576px) {
   .footer {
     flex-direction: column;
@@ -22,7 +17,5 @@
   .footer .resume {
     margin: 20px 0px;
   }
-  .footer .copyright span {
-    letter-spacing: 1px;
-  }
+  
 }

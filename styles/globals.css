@@ -17,27 +17,32 @@ a {
   padding: 0;
 }
 :root {
-  /* --theme: #131040; */
-  --theme: #111a28;
+  --bg: #111a28;
+  --front: #192331;
   --footer: #202131;
+  --text: #fff;
+  --primary: #3f51b5;
+  --secondary: #f50057;
+  --muted: #b1b1b1;
 }
+
 .theme {
   background: #111a28 !important;
 }
 
 #__next {
-  background: #111a28;
+  background: var(--bg);
 }
-.active {
+/* .active {
   background: red !important;
-}
+} */
 
 /* Scroll Style*/
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--theme);
+  background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(
@@ -56,8 +61,13 @@ h2 {
 
 input,
 textarea {
-  color: #fff !important;
+  color: var(--text) !important;
 }
-.MuiPaginationItem-root{
-  color:#fff!important
+.MuiPaginationItem-root {
+  color: var(--text) !important;
+}
+@media only screen and (max-width: 576px) {
+  .MuiTimelineOppositeContent-root {
+    display: none !important;
+  }
 }

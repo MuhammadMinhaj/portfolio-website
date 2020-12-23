@@ -7,7 +7,7 @@
 
 //  Included Third Pertty Components Or Packages
 import { makeStyles } from "@material-ui/core/styles";
-import { Container, Paper, Grow, Typography, Divider } from "@material-ui/core";
+import { Paper, Grow, Typography, Divider } from "@material-ui/core";
 
 import {
   Timeline,
@@ -30,19 +30,7 @@ import {
   Public as PublicIcon,
 } from "@material-ui/icons";
 
-import styled from "../../styles/skills.module.css";
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: "6px 16px",
-  },
-  secondaryTail: {
-    backgroundColor: theme.palette.secondary.main,
-  },
-  primaryMain: {
-    backgroundColor: theme.palette.primary.main,
-  },
-}));
+import styled from "../../styles/services.module.css";
 
 const ItemOfTimeLine = ({
   stepNumber,
@@ -54,7 +42,6 @@ const ItemOfTimeLine = ({
   Connector,
   connectorClass,
 }) => {
-  const classes = useStyles();
   return (
     <TimelineItem>
       <TimelineOppositeContent>
@@ -62,6 +49,7 @@ const ItemOfTimeLine = ({
           0{stepNumber}
         </Typography>
       </TimelineOppositeContent>
+
       <TimelineSeparator>
         <TimelineDot color={iconColor} variant={iconVariant}>
           <IconName />
@@ -70,25 +58,16 @@ const ItemOfTimeLine = ({
       </TimelineSeparator>
       <Grow in>
         <TimelineContent>
-          <Paper
-            elevation={6}
-            className={classes.paper}
-            style={{ background: "transparent" }}
-          >
+          <Paper elevation={6} className={styled.paper}>
             <Typography
               variant="overline"
               display="block"
-              style={{
-                color: "#d0c6c9",
-                borderBottom: "1px dashed #bdbdbd38",
-                fontWeight:'bold',
-                fontSize:'1rem'
-              }}
+              className={styled.title}
             >
               {title}
             </Typography>
 
-            <Typography variant="body2" style={{ color: "#b9b9b9" }}>
+            <Typography variant="body2" className={styled.text}>
               {message}
             </Typography>
           </Paper>
@@ -99,8 +78,6 @@ const ItemOfTimeLine = ({
 };
 
 const Services = () => {
-  const classes = useStyles();
-
   const services = [
     {
       title: "Web Design",
@@ -109,7 +86,7 @@ const Services = () => {
         "I can do an excellent UI/UX design using the latest and powerful technologys for web design and also can responsive design of the web pages.",
       iconName: WebIcon,
       connector: TimelineConnector,
-      connectorClass: classes.secondaryTail,
+      connectorClass: styled.secondaryTail,
     },
     {
       title: "Web Development",
@@ -118,7 +95,7 @@ const Services = () => {
       iconName: CodeIcon,
       iconColor: "primary",
       connector: TimelineConnector,
-      connectorClass: classes.primaryMain,
+      connectorClass: styled.primaryMain,
     },
     {
       title: "Android Development",
@@ -127,7 +104,7 @@ const Services = () => {
       iconName: DeveloperModeIcon,
       iconColor: "secondary",
       connector: TimelineConnector,
-      connectorClass: classes.secondaryTail,
+      connectorClass: styled.secondaryTail,
     },
     {
       title: "IOS Development",
@@ -136,7 +113,7 @@ const Services = () => {
       iconName: AppleIcon,
       iconColor: "primary",
       connector: TimelineConnector,
-      connectorClass: classes.secondaryTail,
+      connectorClass: styled.secondaryTail,
     },
     {
       title: "Bugs Fixing",
@@ -145,7 +122,7 @@ const Services = () => {
       iconName: ErrorIcon,
       iconColor: "secondary",
       connector: TimelineConnector,
-      connectorClass: classes.primaryMain,
+      connectorClass: styled.primaryMain,
     },
     {
       title: "Structure Of Coding",
@@ -154,7 +131,7 @@ const Services = () => {
       iconName: SpeedIcon,
       iconColor: "primary",
       connector: TimelineConnector,
-      connectorClass: classes.secondaryTail,
+      connectorClass: styled.secondaryTail,
     },
     {
       title: "Dyploy To Server",
@@ -166,9 +143,8 @@ const Services = () => {
   ];
 
   return (
-    <Container className={styled.services}>
-      {/* Title Here... */}
-      <Timeline align="alternate" className={styled.services}>
+    <section>
+      <Timeline align="alternate" className={styled.root}>
         {services.map(
           (
             {
@@ -196,7 +172,7 @@ const Services = () => {
           )
         )}
       </Timeline>
-    </Container>
+    </section>
   );
 };
 

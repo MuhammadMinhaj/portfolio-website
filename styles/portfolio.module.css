@@ -1,17 +1,28 @@
 .portfolio {
-  /* background: #101825; */
-  color: #fff;
-
+  color: var(--text);
 }
 
 .tabs {
-  /* border-bottom: 1px solid #0e0e0e; */
   background: #192331;
   border-radius: 4px;
 }
 .card {
   background: #192331 !important;
-  color: #fff !important;
+  color: var(--text) !important;
+}
+.card .cardActions {
+  border-top: 1px solid #111a28;
+  padding: 0.8rem 0.6rem;
+}
+.card .cardActions .btn {
+  color: var(--text);
 }
 
-/* Responsive For Mobile Phone */
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.chip {
+  margin-right: 0.25rem;
+  color: #bdbdbd !important;
+}

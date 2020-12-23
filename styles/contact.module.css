@@ -2,7 +2,7 @@
  * Date:19/12/2020
  * Author: Muhammad Minhaj
  * Title: Style For Contact Component
- * Description: This is a Home page of root path
+ * Description: Style For Contact Component
  * **/
 
 .contactForm,
@@ -11,7 +11,7 @@
   padding: 1rem;
   border-radius: 0.75rem;
   margin: 0.5rem;
-  box-shadow: 0pt 0pt 1pt #5a5151;
+  background: var(--front);
 }
 .contactAddress {
   display: flex;
@@ -19,18 +19,14 @@
   justify-content: space-evenly;
 }
 .contactAddress .item {
-  display: -webkit-flex;
-  display: -moz-box;
   display: flex;
-  border-top: 10px solid #1a2331;
-  /* box-shadow: 1pt -3pt 1pt 0pt #1a2331; */
-  border-radius: 10px 10px;
+  border-top: 10px solid var(--bg);
+  border-radius: 10px;
   padding: 0.5rem;
-  border-bottom: 10px solid #1a2331;
 }
 .contactAddress .item .icon > svg {
   font-size: 3.5rem;
-  color: #bbbbbb;
+  color: var(--muted);
 }
 
 .contactAddress .item .content {
@@ -40,19 +36,17 @@
   width: 100%;
   margin-left: 0.75rem;
 }
-.contactAddress .item .content > h2 {
-  color: #607d8b;
+.contactAddress .item .content .title,
+.contactAddress .item .content .text {
+  font-weight: bold;
 }
-.contactAddress .item .content > h4 {
-  display: flex;
-  align-items: center;
-  color: #fafafae0;
+.contactAddress .item .content .title {
+  font-size: 1rem;
+  color: var(--text);
 }
-
-.contactAddress .item .content > h4 > svg {
-  color: #607d8b;
+.contactAddress .item .content .text {
+  color: var(--muted);
 }
-
 @media only screen and (max-width: 576px) {
   .contactAddress .item {
     margin: 10px 0px;

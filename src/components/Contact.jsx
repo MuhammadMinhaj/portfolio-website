@@ -38,24 +38,10 @@ const Address = (props) => (
       <props.icon />
     </div>
     <div className={styled.content}>
-      <Typography
-        variant="overline"
-        display="block"
-        style={{
-          color: "#d0c6c9",
-          fontWeight: "bold",
-          fontSize: "1rem",
-        }}
-      >
+      <Typography variant="overline" display="block" className={styled.title}>
         {props.title}
       </Typography>
-      <Typography
-        variant="caption"
-        style={{
-          color: "#d0c6c9",
-          fontWeight: "bold",
-        }}
-      >
+      <Typography variant="caption" className={styled.text}>
         {props.text}
       </Typography>
     </div>

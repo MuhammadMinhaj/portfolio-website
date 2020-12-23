@@ -18,23 +18,22 @@ import SocialLinks from "./Social";
 
 const Social = () => (
   <div className={styled.social}>
-    <Typography variant="h6" align="center" color="secondary">
-      Follow Me
-    </Typography>
+    <Typography variant="button">Follow Me</Typography>
     <SocialLinks />
   </div>
 );
 const CopyRight = () => (
-  <div className={styled.copyright}>
-    <Typography variant="overline" display="block">
+  <div>
+    <Typography variant="button" display="block" align="center">
       CopyRight©All Reserved
     </Typography>
-    <Typography variant="overline">Developed By Muhammad Minhaj</Typography>
+    <Typography variant="button" display="block" align="center">
+      Developed By Muhammad Minhaj
+    </Typography>
   </div>
 );
-
 const Footer = () => {
-  const isMobile = useMediaQuery("(max-width:576px)");
+  const isMobileDevices = useMediaQuery("(max-width:576px)");
   return (
     <footer style={{ borderTop: " 1px solid #192331", marginTop: "2rem" }}>
       <Container>
@@ -44,8 +43,8 @@ const Footer = () => {
               Get Resume
             </Button>
           </div>
-          {isMobile ? <Social /> : <CopyRight />}
-          {isMobile ? <CopyRight /> : <Social />}
+          {isMobileDevices ? <Social /> : <CopyRight />}
+          {isMobileDevices ? <CopyRight /> : <Social />}
         </div>
       </Container>
     </footer>

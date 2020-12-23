@@ -1,7 +1,7 @@
 .slider {
   padding: 10rem;
   text-align: center;
-  color: white;
+  color: var(--text);
 }
 .slider .title1 {
   font-weight: 900;
