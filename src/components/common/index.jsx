@@ -27,8 +27,15 @@ export const Title = (props) => {
 };
 
 // Smooth Scroll For Page Component
-export const SmoothScrollLink = ({ children, to }) => (
-  <Link activeClass="null" to={to} smooth={true} spy={true} duration={800}>
+export const SmoothScrollLink = ({ children, to, hideHash }) => (
+  <Link
+    activeClass="null"
+    to={to}
+    smooth={true}
+    spy={true}
+    hashSpy={hideHash ? false : true}
+    duration={800}
+  >
     {children}
   </Link>
 );
@@ -85,10 +92,10 @@ export const ScrollToTop = () => {
   return (
     <Grow in={scroll > 400}>
       <div className={styled.scrollToTop}>
-        <SmoothScrollLink to="__next">
+        <SmoothScrollLink to="__next" hideHash={true}>
           <Fab color="secondary">
             <ArrowUpwardIcon />
-          </Fab>{" "}
+          </Fab>
         </SmoothScrollLink>
       </div>
     </Grow>

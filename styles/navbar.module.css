@@ -32,8 +32,17 @@
   border-radius: 50%;
   display: inline-block;
   border: 2px solid #c30c4d;
+  transition: all 0.75s;
+}
+.activeCircle {
+  background: #f50057;
+  transform: scale(1.2);
 }
 
+.hideCircle {
+  background: none;
+  transform: scale(1);
+}
 /* Mobile Menu */
 .mobileMenu {
   display: none;

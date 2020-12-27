@@ -19,9 +19,6 @@ import { SmoothScrollLink } from "./common";
 import styled from "../../styles/navbar.module.css";
 import data from "../data";
 const { navbar } = data;
-import app from "../../redux/actions/app";
-
-const { handleNavAnimationBar } = app;
 
 const Item = ({ item }) => {
   if (item.href.includes("#")) {
@@ -45,9 +42,20 @@ const Item = ({ item }) => {
 const Navbar = (props) => {
   const isMatchedWidth = useMediaQuery("(min-width:576px)");
   const [isOpen, setOpen] = useState(false);
+  const [count, setCount] = useState(0);
+  const [clearance, setClearance] = useState(null);
   useEffect(() => {
-    handleNavAnimationBar();
-  });
+    setClearance(
+      setInterval(() => {
+        if (count === 9) {
+          setCount(0);
+        } else {
+          setCount(count + 1);
+        }
+      }, 1000)
+    );
+    return () => clearInterval(clearance);
+  }, [count]);
   const toggleDrawer = () => {
     setOpen(!isOpen);
   };
@@ -80,7 +88,10 @@ const Navbar = (props) => {
 
       <div id="navCirculer" className={styled.navCirculer}>
         {[...new Array(10)].map((e, i) => (
-          <span key={i}></span>
+          <span
+            key={i}
+            className={count === i ? styled.activeCircle : styled.hideCircle}
+          ></span>
         ))}
       </div>
     </nav>

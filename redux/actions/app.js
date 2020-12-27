@@ -28,28 +28,28 @@ const app = {
 const { alertMessage, contact, skills, portfolio } = app;
 
 // Start here to functions of Header...
-app.handleNavAnimationBar = () => {
-  let circuler = document.getElementById("navCirculer");
-  let count = 0;
-  setInterval(() => {
-    count++;
-    circuler.childNodes.forEach((span, ind) => {
-      if (circuler.childNodes.length + 1 === count) {
-        count = 1;
-      }
-      if (ind + 1 === count) {
-        // span.style.background = "#ffc107";
-        span.style.background = "#f50057";
-        span.style.transform = "scale(1.2)";
-        span.style.transition = "all 0.75s";
-      } else {
-        span.style.transform = "scale(1)";
-        span.style.transition = "all 0.75s";
-        span.style.background = "none";
-      }
-    });
-  }, 1000);
-};
+// app.handleNavAnimationBar = () => {
+//   let circuler = document.getElementById("navCirculer");
+//   let count = 0;
+//   setInterval(() => {
+//     count++;
+//     circuler.childNodes.forEach((span, ind) => {
+//       if (circuler.childNodes.length + 1 === count) {
+//         count = 1;
+//       }
+//       if (ind + 1 === count) {
+//         // span.style.background = "#ffc107";
+//         span.style.background = "#f50057";
+//         span.style.transform = "scale(1.2)";
+//         span.style.transition = "all 0.75s";
+//       } else {
+//         span.style.transform = "scale(1)";
+//         span.style.transition = "all 0.75s";
+//         span.style.background = "none";
+//       }
+//     });
+//   }, 1000);
+// };
 
 // Start here to functions of AlertMessage
 alertMessage.handleClose = () => {

@@ -13,7 +13,7 @@ import { SmoothScrollLink } from "./common";
 import styled from "../../styles/about.module.css";
 import data from "../data";
 
-const { about } = data;
+const { imgSource, text } = data.about;
 
 const Slider = () => {
   return (
@@ -22,7 +22,7 @@ const Slider = () => {
         <Grid item sm={6}>
           <div className={styled.about__img_wrapper}>
             <Image
-              src="/images/5.jpg"
+              src={imgSource}
               alt="Picture of the author"
               width={350}
               height={380}
@@ -34,7 +34,7 @@ const Slider = () => {
         </Grid>
         <Grid item sm={6}>
           <div className={styled.about__text}>
-            <Typography paragraph>{about}</Typography>
+            <Typography paragraph>{text}</Typography>
 
             <div className={styled.button__wrapper}></div>
             <Button
