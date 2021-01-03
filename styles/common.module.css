@@ -11,12 +11,12 @@
   border-radius: 0.5rem;
 }
 .title .title1 {
-  background: #ffffff14;
-  color: #ffffff;
+  background: var(--front);
+  color: var(--text);
   margin-right: 0.5rem;
 }
 .title .title2 {
-  color: #f50a57;
+  color: var(--secondary);
 }
 /* Scroll To Top  */
 .scrollToTop {
@@ -25,6 +25,36 @@
   right: 40px;
   z-index: 9999;
 }
+/* Start here to Logo Styled */
+
+.logo {
+  width: 65px;
+  height: 65px;
+  border: 4px solid var(--secondary);
+  border-radius: 0.65rem;
+  position: relative;
+  margin: auto;
+}
+.logo .inner {
+  width: 65px;
+  height: 65px;
+  background: var(--front);
+  border-radius: 0.65rem;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  transform: rotate(45deg);
+}
+.logo .inner .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform: rotate(-45deg);
+  padding: 0.25rem;
+}
+
 @media only screen and (max-width: 576px) {
   .title {
     padding: 5rem 0rem 2rem 0rem;

@@ -22,6 +22,7 @@ import {
   Button,
   Grid,
   Chip,
+  Grow,
 } from "@material-ui/core";
 import { Pagination } from "@material-ui/lab";
 // Included Material-Icons
@@ -78,72 +79,74 @@ const PortfolioCard = ({
   const isSmallDevices = useMediaQuery("(max-width:600px)");
   return (
     <Grid item sm={4}>
-      <Card className={styled.card} raised={true} elevation={7}>
-        <CardActionArea href={url ? url : null} target="blank">
-          {thumbnail && (
-            <Image
-              width={isSmallDevices ? 570 : 400}
-              height={isSmallDevices ? 350 : 200}
-              src={thumbnail}
-            />
-          )}
+      <Grow in>
+        <Card className={styled.card} raised={true} elevation={7}>
+          <CardActionArea href={url ? url : null} target="blank">
+            {thumbnail && (
+              <Image
+                width={isSmallDevices ? 570 : 400}
+                height={isSmallDevices ? 350 : 200}
+                src={thumbnail}
+              />
+            )}
 
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {title}
-            </Typography>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                {title}
+              </Typography>
 
-            <InfoText name="Date" value={date} />
-            <InfoText name="Client" value={client} />
-            <InfoText name="Industry" value={industry} />
-            <InfoText name="Type" value={type} />
-            <InfoText name="Time" value={time} />
-            <InfoText name="URL" value={url} />
-            <InfoText
-              name="Description"
-              value={description}
-              isDescription={true}
-            />
-            <br />
-            <Typography variant="overline">Tech: </Typography>
-            {tech &&
-              tech
-                .split(",")
-                .map((t, i) => (
-                  <Chip
-                    key={i}
-                    label={t}
-                    variant="outlined"
-                    size="small"
-                    className={styled.chip}
-                  />
-                ))}
-          </CardContent>
-        </CardActionArea>
-        <CardActions className={styled.cardActions}>
-          <Button
-            startIcon={url ? <PublicIcon /> : <VisibilityOffIcon />}
-            variant="outlined"
-            color="secondary"
-            disabled={url ? false : true}
-            href={url}
-            target="blank"
-            className={styled.btn}
-          >
-            Live
-          </Button>
-          <Button
-            startIcon={<GitHubIcon />}
-            variant="outlined"
-            disabled={sourceCode ? false : true}
-            href={sourceCode}
-            target="blank"
-            className={styled.btn}
-          >
-            Source
-          </Button>
-        </CardActions>
-      </Card>
+              <InfoText name="Date" value={date} />
+              <InfoText name="Client" value={client} />
+              <InfoText name="Industry" value={industry} />
+              <InfoText name="Type" value={type} />
+              <InfoText name="Time" value={time} />
+              <InfoText name="URL" value={url} />
+              <InfoText
+                name="Description"
+                value={description}
+                isDescription={true}
+              />
+              <br />
+              <Typography variant="overline">Tech: </Typography>
+              {tech &&
+                tech
+                  .split(",")
+                  .map((t, i) => (
+                    <Chip
+                      key={i}
+                      label={t}
+                      variant="outlined"
+                      size="small"
+                      className={styled.chip}
+                    />
+                  ))}
+            </CardContent>
+          </CardActionArea>
+          <CardActions className={styled.cardActions}>
+            <Button
+              startIcon={url ? <PublicIcon /> : <VisibilityOffIcon />}
+              variant="outlined"
+              color="secondary"
+              disabled={url ? false : true}
+              href={url}
+              target="blank"
+              className={styled.btn}
+            >
+              Live
+            </Button>
+            <Button
+              startIcon={<GitHubIcon />}
+              variant="outlined"
+              disabled={sourceCode ? false : true}
+              href={sourceCode}
+              target="blank"
+              className={styled.btn}
+            >
+              Source
+            </Button>
+          </CardActions>
+        </Card>
+      </Grow>
     </Grid>
   );
 };

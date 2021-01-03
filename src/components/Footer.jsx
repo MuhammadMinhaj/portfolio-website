@@ -15,7 +15,7 @@ import {
 // Included Custom Packages or Componet or Others...
 import styled from "../../styles/footer.module.css";
 import SocialLinks from "./Social";
-
+import { Logo } from "./common";
 const Social = () => (
   <div className={styled.social}>
     <Typography variant="button">Follow Me</Typography>
@@ -25,7 +25,7 @@ const Social = () => (
 const CopyRight = () => (
   <div>
     <Typography variant="button" display="block" align="center">
-      CopyRight©All Reserved
+      CopyRight©All Rights Reserved
     </Typography>
     <Typography variant="button" display="block" align="center">
       Developed By Muhammad Minhaj
@@ -35,11 +35,17 @@ const CopyRight = () => (
 const Footer = () => {
   const isMobileDevices = useMediaQuery("(max-width:576px)");
   return (
-    <footer style={{ borderTop: " 1px solid #192331", marginTop: "2rem" }}>
+    <footer style={{ borderTop: "1px solid var(--front)", marginTop: "2rem" }}>
       <Container>
         <div className={styled.footer}>
           <div className={styled.resume}>
-            <Button color="secondary" variant="outlined">
+            <Logo />
+            <br />
+            <Button
+              color="secondary"
+              variant="outlined"
+              size={isMobileDevices ? "large" : "small"}
+            >
               Get Resume
             </Button>
           </div>

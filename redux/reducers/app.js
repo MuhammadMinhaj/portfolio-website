@@ -7,13 +7,17 @@
 // Included Custom Packages
 import types from "../types";
 const {
-  alertMessage: { HANDLE_OPEN_ALERT, HANDLE_CLOSE_ALERT },
-  loader: { HANDLE_OPEN_LOADER, HANDLE_STOP_LOADER },
+  alertMessage: { HANDLE_CLOSE_ALERT },
+  loader: { HANDLE_OPEN_LOADER },
   skills: { INCREMENT_STEP, DECREMENT_STEP, DYNAMIC_ACTIVE_STEP, HANDLE_MODAL },
-  contact: { HANDLE_CHANGE, HANDLE_FIELDS_ERROR },
+  contact: {
+    HANDLE_CHANGE,
+    HANDLE_FIELDS_ERROR,
+    HANDLE_SUBMIT_SUCCESS,
+    HANDLE_SUBMIT_FAILED,
+  },
 } = types;
 
-const initValues = { value: "", error: "" };
 const alertInitValues = {
   isError: false,
   message: "",
@@ -32,26 +36,16 @@ const initState = {
     index: null,
   },
   contact: {
-    name: initValues,
-    email: initValues,
-    subject: initValues,
-    message: initValues,
+    name: { value: "", error: "" },
+    email: { value: "", error: "" },
+    subject: { value: "", error: "" },
+    message: { value: "", error: "" },
   },
 };
 
 const reducer = (state = initState, action) => {
   switch (action.type) {
     // Start here to AlertMessage state control
-    case HANDLE_OPEN_ALERT:
-      state = {
-        ...state,
-        alertMessage: {
-          ...state.alertMessage,
-          message: action.payload.message,
-          isError: action.payload.isError,
-        },
-      };
-      return state;
     case HANDLE_CLOSE_ALERT:
       state = {
         ...state,
@@ -66,12 +60,6 @@ const reducer = (state = initState, action) => {
           isLoading: true,
           message: action.payload,
         },
-      };
-      return state;
-    case HANDLE_STOP_LOADER:
-      state = {
-        ...state,
-        loader: loaderInitValues,
       };
       return state;
     // Start here to Skills
@@ -131,6 +119,33 @@ const reducer = (state = initState, action) => {
         contact: {
           ...state.contact,
           ...action.payload,
+        },
+      };
+      return state;
+
+    case HANDLE_SUBMIT_SUCCESS:
+      state = {
+        ...state,
+        loader: loaderInitValues,
+        alertMessage: {
+          message: action.payload,
+          isError: false,
+        },
+        contact: {
+          name: { value: "", error: "" },
+          email: { value: "", error: "" },
+          subject: { value: "", error: "" },
+          message: { value: "", error: "" },
+        },
+      };
+      return state;
+    case HANDLE_SUBMIT_FAILED:
+      state = {
+        ...state,
+        loader: loaderInitValues,
+        alertMessage: {
+          message: action.payload,
+          isError: true,
         },
       };
       return state;

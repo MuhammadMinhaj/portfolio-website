@@ -35,6 +35,7 @@ export const SmoothScrollLink = ({ children, to, hideHash }) => (
     spy={true}
     hashSpy={hideHash ? false : true}
     duration={800}
+    style={{ cursor: "pointer" }}
   >
     {children}
   </Link>
@@ -46,7 +47,7 @@ export const AlertMessage = ({ open, isError, message, handleClose }) => {
     <Snackbar
       anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
       open={open}
-      autoHideDuration={6000}
+      autoHideDuration={12000}
       onClose={handleClose}
     >
       <Alert severity={isError ? "error" : "success"}>{message}</Alert>
@@ -101,3 +102,15 @@ export const ScrollToTop = () => {
     </Grow>
   );
 };
+// Logo Component
+export const Logo = () => (
+  <SmoothScrollLink to="__next" hideHash={true}>
+    <div className={styled.logo}>
+      <div className={styled.inner}>
+        <div className={styled.content}>
+          <img src="/logo.png" alt="M" width="90%" />
+        </div>
+      </div>
+    </div>
+  </SmoothScrollLink>
+);

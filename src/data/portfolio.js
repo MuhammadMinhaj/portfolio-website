@@ -28,384 +28,42 @@ const { createPortfolioObject } = helperMethods;
  * => createPortfolioObject('02/02/2020','7days','../srcOfThumbnail','https://demo-project.com','https://github.com/username/demo-project','Information & Technology','Web Host Bd','NextJs,ReactJs','Something','Web-Bd','something tell about project')
  * **/
 
+let makeWebData = (n) => {
+  return Array(n)
+    .fill(",")
+    .map((e, i) => {
+      return createPortfolioObject(
+        `0${i + 1}/0${i + 1}/2021`,
+        `${i}days`,
+        "/images/thumbnail.jpg",
+        "https://demo-project.com",
+        "https://github.com/dev-mdminhaj",
+        "Information & Technology",
+        `Demo(${i + 1})`,
+        "NextJs,ReactJs",
+        "Demo",
+        "Demo",
+        "This is just demo it's not a project"
+      );
+    });
+};
+
 const portfolio = [
   {
     name: "Web Apps",
-    projects: [
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "1Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "2Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "3Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "4Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "5Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "6Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "7Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "8Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "9Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "10Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "11Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "12Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "13Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "14Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "15Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "16Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "17Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "18Web Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application."
-      ),
-    ],
+    projects: makeWebData(15),
   },
   {
     name: "Mobile Apps",
-    projects: [
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "Mobile Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "something tell about project"
-      ),
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "Others Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "something tell about project"
-      ),  createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "Others Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "something tell about project"
-      ),  createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "Others Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "something tell about project"
-      ),  createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "Others Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "something tell about project"
-      ),  createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "Others Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "something tell about project"
-      ),  createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "Others Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "something tell about project"
-      ),  createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "Others Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "something tell about project"
-      ),
-    ],
+    projects: makeWebData(3),
   },
   {
     name: "Desktop Software",
-    projects: [
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "Desktop Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "something tell about project"
-      ),
-    ],
+    projects: makeWebData(12),
   },
   {
     name: "Others apps",
-    projects: [
-      createPortfolioObject(
-        "02/02/2020",
-        "7days",
-        "/images/thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/username/demo-project",
-        "Information & Technology",
-        "Others Host Bd",
-        "NextJs,ReactJs",
-        "Something",
-        "Web-Bd",
-        "something tell about project"
-      ),
-    ],
+    projects: makeWebData(5),
   },
 ];
 

@@ -1,7 +1,19 @@
 /* Navbar Root Element */
-.navbar {
+.navContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.15rem 0rem;
+}
+.navContainer .brand {
+  width: 15%;
+  text-align: center;
+}
+
+.navbar {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
   padding: 1rem 0rem;
 }
 
@@ -10,6 +22,9 @@
   list-style: none;
   text-transform: uppercase;
   font-size: 15px;
+}
+.nav_item .nav_button {
+  width: 7rem;
 }
 .nav_item a {
   cursor: pointer;
@@ -47,7 +62,11 @@
 .mobileMenu {
   display: none;
 }
-
+@media only screen and (max-width: 1000px) {
+  .nav_item .nav_button {
+    width: auto;
+  }
+}
 /* Responsive For Style */
 @media only screen and (max-width: 576px) {
   .navbar {
@@ -73,6 +92,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 0px;
+    align-items: center;
   }
   .closeIcon {
     text-align: center;
@@ -80,5 +100,8 @@
     background: var(--bg);
     border-bottom: 1px solid #0000003d;
     color: white;
+  }
+  .nav_item .nav_button {
+    width: 7rem;
   }
 }

@@ -17,13 +17,13 @@ const { createNavbarObject } = helperMethods;
  * **/
 
 const navbar = [
-  createNavbarObject("Home", "/"),
+  createNavbarObject("Home", "#__next"),
   createNavbarObject("About", "#about"),
   createNavbarObject("Skills", "#skills"),
   createNavbarObject("Portfolio", "#portfolio"),
   createNavbarObject("Services", "#services"),
   createNavbarObject("Contact", "#contact"),
-  createNavbarObject("Blog", "/blog"),
+  createNavbarObject("Blog", "https://github.com/dev-mdminhaj/blog"),
 ];
 
 export default navbar;

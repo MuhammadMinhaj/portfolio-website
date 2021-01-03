@@ -16,8 +16,9 @@ const Slider = () => {
   return (
     <section>
       <div className={styled.slider}>
-        <h4>Hey there!</h4>
+        <h3 style={{lineHeight:'2'}}>Hey there!</h3>
         <h1 className={styled.title1}>I'm</h1>
+
         <h1 className={styled.title2}>Md. Minhaj</h1>
         <Typography color="secondary" variant="h5">
           A Full Stack Developer

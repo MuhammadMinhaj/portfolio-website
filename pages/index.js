@@ -31,8 +31,9 @@ const Home = () => {
     <>
       <Head>
         <title>Muhammad Minhaj || Full Stack Developer</title>
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
       </Head>
-      
+
       <Loader open={loader.isLoading} message={loader.message} />
       <AlertMessage
         open={message ? true : false}

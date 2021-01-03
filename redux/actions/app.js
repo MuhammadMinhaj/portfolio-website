@@ -11,10 +11,15 @@ import axios from "axios";
 import types from "../types";
 
 const {
-  alertMessage: { HANDLE_OPEN_ALERT, HANDLE_CLOSE_ALERT },
-  loader: { HANDLE_OPEN_LOADER, HANDLE_STOP_LOADER },
+  alertMessage: {  HANDLE_CLOSE_ALERT },
+  loader: { HANDLE_OPEN_LOADER },
   skills: { INCREMENT_STEP, DECREMENT_STEP, DYNAMIC_ACTIVE_STEP, HANDLE_MODAL },
-  contact: { HANDLE_CHANGE, HANDLE_FIELDS_ERROR },
+  contact: {
+    HANDLE_CHANGE,
+    HANDLE_FIELDS_ERROR,
+    HANDLE_SUBMIT_SUCCESS,
+    HANDLE_SUBMIT_FAILED,
+  },
 } = types;
 
 const app = {
@@ -26,30 +31,6 @@ const app = {
 };
 
 const { alertMessage, contact, skills, portfolio } = app;
-
-// Start here to functions of Header...
-// app.handleNavAnimationBar = () => {
-//   let circuler = document.getElementById("navCirculer");
-//   let count = 0;
-//   setInterval(() => {
-//     count++;
-//     circuler.childNodes.forEach((span, ind) => {
-//       if (circuler.childNodes.length + 1 === count) {
-//         count = 1;
-//       }
-//       if (ind + 1 === count) {
-//         // span.style.background = "#ffc107";
-//         span.style.background = "#f50057";
-//         span.style.transform = "scale(1.2)";
-//         span.style.transition = "all 0.75s";
-//       } else {
-//         span.style.transform = "scale(1)";
-//         span.style.transition = "all 0.75s";
-//         span.style.background = "none";
-//       }
-//     });
-//   }, 1000);
-// };
 
 // Start here to functions of AlertMessage
 alertMessage.handleClose = () => {
@@ -108,19 +89,23 @@ contact.handleSubmit = (e) => {
     let { name, email, subject, message } = contact;
 
     let hasError = false;
-    if (name.value.length === 0) {
+
+    if (!name.value) {
       name.error = "Please provied your name";
       hasError = true;
     }
-    if (email.value.length === 0) {
+    if (!email.value) {
       email.error = "Please provied your email";
       hasError = true;
+    } else if (!email.value.includes("@") || !email.value.includes(".")) {
+      email.error = "Invalid email address";
+      hasError = true;
     }
-    if (subject.value.length === 0) {
+    if (!subject.value) {
       subject.error = "Please provied your subject";
       hasError = true;
     }
-    if (message.value.length === 0) {
+    if (!message.value) {
       message.error = "Please provied your message";
       hasError = true;
     }
@@ -135,28 +120,33 @@ contact.handleSubmit = (e) => {
       payload: "Sending...",
     });
     try {
-      const res = await axios.post("https://test/api/contact");
-      dispatch({
-        type: HANDLE_STOP_LOADER,
-      });
-      dispatch({
-        type: HANDLE_OPEN_ALERT,
-        payload: {
-          isError: false,
-          message: res.data.message,
+      const res = await axios.post(
+        process.env.CONTACT_SEND_MAIL_URI_POST,
+        {
+          name: name.value,
+          email: email.value,
+          subject: subject.value,
+          message: message.value,
         },
+        {
+          headers: {
+            "x-api-key": process.env.HEROKU_API_KEY,
+          },
+        }
+      );
+      dispatch({
+        type: HANDLE_SUBMIT_SUCCESS,
+        payload: res.data.message,
       });
     } catch (e) {
       dispatch({
-        type: HANDLE_STOP_LOADER,
+        type: HANDLE_SUBMIT_FAILED,
+        payload:
+          e.response.status === 400
+            ? e.response.data.message
+            : e.response.statusText,
       });
-      dispatch({
-        type: HANDLE_OPEN_ALERT,
-        payload: {
-          isError: true,
-          message: e.message,
-        },
-      });
+      
     }
   };
 };

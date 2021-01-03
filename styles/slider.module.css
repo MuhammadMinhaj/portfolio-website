@@ -6,6 +6,7 @@
 .slider .title1 {
   font-weight: 900;
   color: #f50057;
+  font-size: 2rem;
 }
 .slider .title2 {
   font-size: max(min(100px, 5vw));
