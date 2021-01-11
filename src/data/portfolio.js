@@ -35,7 +35,7 @@ let makeWebData = (n) => {
       return createPortfolioObject(
         `0${i + 1}/0${i + 1}/2021`,
         `${i}days`,
-        "/static/images/thumbnail.jpg",
+        "/static/images/default-thumbnail.jpg",
         "https://demo-project.com",
         "https://github.com/dev-mdminhaj",
         "Information & Technology",

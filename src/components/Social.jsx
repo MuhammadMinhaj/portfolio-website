@@ -12,6 +12,7 @@ import {
   GitHub as GitHubIcon,
   LinkedIn as LinkedInIcon,
   Twitter as TwitterIcon,
+  Instagram as InstagramIcon,
 } from "@material-ui/icons";
 // Included Custom Packages or Components
 
@@ -22,10 +23,11 @@ function createObject(icon, link) {
   };
 }
 const socialIcons = [
-  createObject(FacebookIcon, "https://facebook.com/"),
-  createObject(GitHubIcon, "https://github.com/"),
-  createObject(LinkedInIcon, "https://linkedin.com/"),
-  createObject(TwitterIcon, "https://twitter.com/"),
+  createObject(FacebookIcon, "https://facebook.com/dev.mdminhaj"),
+  createObject(GitHubIcon, "https://github.com/dev-mdminhaj"),
+  createObject(LinkedInIcon, "https://linkedin.com/in/dev-mdminhaj"),
+  createObject(TwitterIcon, "https://twitter.com/dev_mdminhaj"),
+  createObject(InstagramIcon, "https://www.instagram.com/dev_mdminhaj"),
 ];
 const SocialMedia = (props) => {
   return (

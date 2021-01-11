@@ -131,7 +131,7 @@ const SkillInnerItem = ({ iconSrc, text, ind }) => {
       <div className={styled.item}>
         <div className={styled.icon} onClick={() => dispatch(handleModal(ind))}>
           <Image
-            src={"/" + iconSrc}
+            src={iconSrc}
             alt="Icon"
             width={100}
             height={isMobileDevice ? 80 : 60}
@@ -170,7 +170,7 @@ const SkillsItem = () => {
               </h1>
 
               <Image
-                src={"/" + skillList[activeStep][index].src}
+                src={skillList[activeStep][index].src}
                 alt={skillList[activeStep][index].title}
                 width={250}
                 height={100}
