@@ -33,7 +33,7 @@ const SocialMedia = (props) => {
   return (
     <div>
       {socialIcons.map((social, i) => (
-        <IconButton key={i} color="inherit" href={social.link}>
+        <IconButton key={i} color="inherit" href={social.link} target="blank">
           {<social.icon />}
         </IconButton>
       ))}

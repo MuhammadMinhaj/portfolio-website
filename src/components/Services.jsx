@@ -83,7 +83,7 @@ const Services = () => {
       title: "Web Design",
       iconColor: "secondary",
       message:
-        "I can do an excellent UI/UX design using the latest and powerful technologys for web design and also can responsive design of the web pages.",
+        "I can make excellent UI/UX designs using the latest technology to make your website or apps.",
       iconName: WebIcon,
       connector: TimelineConnector,
       connectorClass: styled.secondaryTail,
@@ -91,7 +91,7 @@ const Services = () => {
     {
       title: "Web Development",
       message:
-        "I can make API or rest API for spa applications and mobile applications and I also can connect API with your spa application or any other application to make the dynamic web application.",
+        "I can develop an API or Restful API for your application. You can use anywhere this API to make a front-end application. also, I do full-stack development and mern-stack development.",
       iconName: CodeIcon,
       iconColor: "primary",
       connector: TimelineConnector,
@@ -100,7 +100,7 @@ const Services = () => {
     {
       title: "Android Development",
       message:
-        "I can make a cross-platform application using the react-native and I also can awesome design for any kind of android application.",
+        "I can develop a cross-platform application using the React-Native framework. Which is run your Android and IOS platforms.",
       iconName: DeveloperModeIcon,
       iconColor: "secondary",
       connector: TimelineConnector,
@@ -109,7 +109,7 @@ const Services = () => {
     {
       title: "IOS Development",
       message:
-        "I can make a cross-platform application using the react-native and I also can awesome design for any kind of IOS application.",
+        "I can develop a cross-platform application using the React-Native framework. Which is run your Android and IOS platforms.",
       iconName: AppleIcon,
       iconColor: "primary",
       connector: TimelineConnector,
@@ -118,7 +118,7 @@ const Services = () => {
     {
       title: "Bugs Fixing",
       message:
-        "I can easily fixed bugs of any kind of web application and also can optimize web application.",
+        "I can fix bugs in any kind of website, also fix your cross-platform android application bugs which are made by react-native.",
       iconName: ErrorIcon,
       iconColor: "secondary",
       connector: TimelineConnector,
@@ -127,7 +127,7 @@ const Services = () => {
     {
       title: "Structure Of Coding",
       message:
-        "I always following strong and best coding structure to make any kind of applications,and my coding styles is very manageable and upgradable and also readable.",
+        "I always following the best practices of coding and project structure to make every application. Which is manageable and upgradable and also readable.",
       iconName: SpeedIcon,
       iconColor: "primary",
       connector: TimelineConnector,
@@ -136,7 +136,7 @@ const Services = () => {
     {
       title: "Dyploy To Server",
       message:
-        "I can deploy applications or websites in any kind of hosting server.",
+        "I can deploy your applications or websites on any type of hosting server to live your applications or website.",
       iconName: PublicIcon,
       iconColor: "secondary",
     },

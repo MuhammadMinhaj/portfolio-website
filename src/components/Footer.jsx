@@ -25,7 +25,7 @@ const Social = () => (
 const CopyRight = () => (
   <div>
     <Typography variant="button" display="block" align="center">
-      CopyRight©All Rights Reserved
+      Thank You
     </Typography>
     <Typography variant="button" display="block" align="center">
       Developed By Muhammad Minhaj

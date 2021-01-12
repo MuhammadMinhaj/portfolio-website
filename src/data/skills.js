@@ -36,6 +36,7 @@ const skills = {
       "https://expressjs.com",
       "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications."
     ),
+
     createSkillsObject(
       "React Js",
       "85%",
@@ -51,6 +52,13 @@ const skills = {
       "React Native combines the best parts of native development with React, a best-in-class JavaScript library for building user interfaces.Use a little—or a lot. You can use React Native today in your existing Android and iOS projects or you can create a whole new app from scratch."
     ),
     createSkillsObject(
+      "Next Js",
+      "80%",
+      "/static/icons/nextjs.svg",
+      "https://nextjs.org/",
+      "Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed."
+    ),
+    createSkillsObject(
       "Redux",
       "80%",
       "/static/icons/redux.svg",
@@ -59,7 +67,7 @@ const skills = {
     ),
     createSkillsObject(
       "MongoDB",
-      "85%",
+      "80%",
       "/static/icons/mongodb.svg",
       "https://www.mongodb.com",
       "MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.MongoDB is a document database, which means it stores data in JSON-like documents. We believe this is the most natural way to think about data, and is much more expressive and powerful than the traditional row/column model."
@@ -94,13 +102,7 @@ const skills = {
       "https://www.python.org",
       "Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.Python simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse."
     ),
-    createSkillsObject(
-      "PHP",
-      "60%",
-      "/static/icons/php.svg",
-      "https://www.php.net/",
-      "PHP (recursive acronym for PHP: Hypertext Preprocessor ) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML."
-    ),
+   
   ],
   tools: [
     createSkillsObject(

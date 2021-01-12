@@ -16,7 +16,7 @@ const Slider = () => {
   return (
     <section>
       <div className={styled.slider}>
-        <h3 style={{lineHeight:'2'}}>Hey there!</h3>
+        <h3 style={{ lineHeight: "2" }}>Hey there!</h3>
         <h1 className={styled.title1}>I'm</h1>
 
         <h1 className={styled.title2}>Md. Minhaj</h1>
@@ -24,7 +24,7 @@ const Slider = () => {
           A Full Stack Developer
         </Typography>
         <Typography variant="overline">
-          Web Designer & Web Developer & Programmer
+          Web Developer & Apps Developer & Programmer
         </Typography>
         <br />
         <br />

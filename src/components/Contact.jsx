@@ -68,11 +68,11 @@ function createFormFieldsObj(name, label, others) {
 const contactLists = [
   createContactObject(EmailIcon, "~Email", "dev.mdminhaj@gmail.com"),
   createContactObject(PhoneIcon, "~Phone", "+8801831-137771"),
-  createContactObject(DuoIcon, "~Skype", "@dev.mdminhaj"),
+  createContactObject(DuoIcon, "~Skype", "@N/A"),
   createContactObject(
     LocationOnIcon,
     "~Address",
-    "Amin textile colony,Chittagong,Bangladesh-4042"
+    "Amin Textiles Ltd.-2, Sholashahar,Chittagong,4211,Chittagong, Bangladesh"
   ),
 ];
 

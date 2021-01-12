@@ -5,7 +5,7 @@
  * Description: This is a Home page of root path
  * **/
 // Included Third Pertty Packages Or Component
-import Head from "next/head";
+
 import { useSelector, useDispatch } from "react-redux";
 // Included Custom Components
 import { Title, Loader, AlertMessage } from "../src/components/common";
@@ -29,11 +29,7 @@ const Home = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <Head>
-        <title>Muhammad Minhaj || Full Stack Developer</title>
-        <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
-      </Head>
-
+     
       <Loader open={loader.isLoading} message={loader.message} />
       <AlertMessage
         open={message ? true : false}
@@ -54,7 +50,7 @@ const Home = () => {
         <Title id="portfolio" element="h1" title="MY" subTitle="PORTFOLIO" />
         <Portfolio />
         {/* Services */}
-        <Title id="services" element="h1" title="MY" subTitle="SERVICES" />
+        <Title id="services" element="h1" title="Expected On" subTitle=" Me" />
         <Services />
         {/* Contact */}
         <Title id="contact" element="h1" title="CONTACT" subTitle="ME" />

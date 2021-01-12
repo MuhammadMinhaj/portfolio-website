@@ -1,5 +1,6 @@
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import SEO from "../src/components/common/SEO";
 import { ServerStyleSheets } from "@material-ui/core/styles";
 
 export default class MyDocument extends Document {
@@ -7,7 +8,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta content="Md Minhaj" name="Md Minhaj" />
+          <SEO pageTitle="Muhammad Minhaj || Full Stack Developer" />
         </Head>
         <body>
           <Main />

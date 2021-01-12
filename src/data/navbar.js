@@ -21,9 +21,9 @@ const navbar = [
   createNavbarObject("About", "#about"),
   createNavbarObject("Skills", "#skills"),
   createNavbarObject("Portfolio", "#portfolio"),
-  createNavbarObject("Services", "#services"),
+  createNavbarObject("Expected", "#services"),
   createNavbarObject("Contact", "#contact"),
-  createNavbarObject("Blog", "https://github.com/dev-mdminhaj/blog"),
+  createNavbarObject("Blog", "https://dev-mdminhaj.github.io/blog"),
 ];
 
 export default navbar;
