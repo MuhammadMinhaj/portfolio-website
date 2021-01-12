@@ -7,7 +7,7 @@
 
 // Included third pertty packages or components
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import PropTypes from "prop-types";
 import {
   Tabs,
@@ -16,6 +16,7 @@ import {
   Box,
   useMediaQuery,
   Card,
+  CardMedia,
   CardActionArea,
   CardActions,
   CardContent,
@@ -76,19 +77,26 @@ const PortfolioCard = ({
     description,
   },
 }) => {
-  const isSmallDevices = useMediaQuery("(max-width:600px)");
+  // const isSmallDevices = useMediaQuery("(max-width:600px)");
   return (
-    <Grid item sm={4}>
+    <Grid item sm={4} style={{ width: "100%" }}>
       <Grow in>
         <Card className={styled.card} raised={true} elevation={7}>
           <CardActionArea href={url ? url : null} target="blank">
             {thumbnail && (
+              <CardMedia
+                className={styled.cardMedia}
+                image={thumbnail}
+                title="Thumbnail"
+              />
+            )}
+            {/* {thumbnail && (
               <Image
                 width={isSmallDevices ? 570 : 400}
                 height={isSmallDevices ? 350 : 200}
                 src={thumbnail}
               />
-            )}
+            )} */}
 
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">

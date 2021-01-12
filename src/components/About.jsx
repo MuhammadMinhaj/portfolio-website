@@ -6,7 +6,7 @@
  * **/
 
 //  Included Third Pertty Components Or Packages
-import Image from "next/image";
+// import Image from "next/image";
 import { Grid, Typography, Button } from "@material-ui/core";
 // Included Custom Packages or Components
 import { SmoothScrollLink } from "./common";
@@ -19,9 +19,10 @@ const Slider = () => {
   return (
     <section className={styled.about__section}>
       <Grid container>
-        <Grid item sm={6}>
+        <Grid item sm={6} style={{ width: "100%" }}>
+          
           <div className={styled.about__img_wrapper}>
-            <Image
+            {/* <Image
               src={imgSource}
               alt="Picture of the author"
               width={350}
@@ -29,8 +30,15 @@ const Slider = () => {
               loading="eager"
               quality={100}
               className={styled.about__img}
+            />  */}
+
+            <img
+              src={imgSource}
+              alt="Muhammad Minhaj || Full Stack Software Developer"
+              className={styled.about__img}
             />
           </div>
+      
         </Grid>
         <Grid item sm={6}>
           <div className={styled.about__text}>

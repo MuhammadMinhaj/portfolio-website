@@ -6,7 +6,7 @@
  * **/
 
 //  Included Third Pertty Components Or Packages
-import Image from "next/image";
+// import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
@@ -130,12 +130,13 @@ const SkillInnerItem = ({ iconSrc, text, ind }) => {
     <Grow in>
       <div className={styled.item}>
         <div className={styled.icon} onClick={() => dispatch(handleModal(ind))}>
-          <Image
+          {/* <Image
             src={iconSrc}
             alt="Icon"
             width={100}
             height={isMobileDevice ? 80 : 60}
-          />
+          /> */}
+          <img src={iconSrc} width="100%" height="100%" alt="Icon" />
         </div>
         <div className={styled.content}>
           <h1>{text}</h1>
@@ -169,11 +170,17 @@ const SkillsItem = () => {
                 {skillList[activeStep][index].progress}
               </h1>
 
-              <Image
+              {/* <Image
                 src={skillList[activeStep][index].src}
                 alt={skillList[activeStep][index].title}
                 width={250}
                 height={100}
+              /> */}
+              <img
+                src={skillList[activeStep][index].src}
+                width={250}
+                height={100}
+                alt={skillList[activeStep][index].title}
               />
               <h2>{skillList[activeStep][index].title}</h2>
 

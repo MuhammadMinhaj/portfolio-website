@@ -6,7 +6,6 @@
  * **/
 
 //  Included Third Pertty Components Or Packages
-import Head from "next/head";
 import data from "../../data";
 const {
   title,
