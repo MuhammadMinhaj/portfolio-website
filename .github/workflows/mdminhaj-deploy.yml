@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 15.x]
+        node-version: [15.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,11 +26,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Installing project dependencies...
-      run: npm ci
+      run: yarn ci
     - name: Building project...
-      run: npm run build
+      run: yarn build
     - name: exporting to create SSG...
-      run: npm run export
+      run: yarn export
       
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.7.1
