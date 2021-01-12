@@ -26,11 +26,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Installing project dependencies...
-    - run: npm ci
+      run: npm ci
     - name: Building project...
-    - run: npm run build
+      run: npm run build
     - name: exporting to create SSG...
-    - run: npm run export
+      run: npm run export
       
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.7.1
