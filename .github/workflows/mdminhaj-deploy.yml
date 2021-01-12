@@ -25,14 +25,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install yarn
-      run: npm install -g yarn
     - name: Installing project dependencies...
-    - run: yarn install
+    - run: npm ci
     - name: Building project...
-    - run: yarn build
+    - run: npm run build
     - name: exporting to create SSG...
-    - run: yarn export
+    - run: npm run export
       
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.7.1
