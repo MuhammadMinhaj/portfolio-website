@@ -48,9 +48,10 @@ const SEO = ({ pageTitle }) => {
       <link rel="canonical" href={url} />
       <link rel="icon" type="image/png" sizes="48x48" href={favicon} />
       {/* Google Verify */}
+
       <meta
         name="google-site-verification"
-        content="el6jVLbKklKeLv68mkHW945_p4gcTEgcUKt6I9pNBPI"
+        content="AXHFqtiVvlf3_x1Ui2xvKy9aCmzi7OLuIewDgv7LO5E"
       />
     </>
   );
