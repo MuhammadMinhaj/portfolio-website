@@ -7,6 +7,6 @@ module.exports = {
   },
 
   // Use the CDN in production and localhost for development.
-  assetPrefix: isDev ? "" : "https://dev-mdminhaj.github.io",
-  basePath: isDev ? "" : "https://dev-mdminhaj.github.io",
+  assetPrefix: isDev ? "" : "/",
+  basePath: isDev ? "" : "/",
 };
