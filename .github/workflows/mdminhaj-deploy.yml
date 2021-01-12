@@ -28,6 +28,9 @@ jobs:
         run: yarn install
       - name: Building project...
         run: yarn build
+        env:
+          NEXT_PUBLIC_API_KEY: mypersonalcontactapikeys011001and0011
+          NEXT_PUBLIC_CONTACT_API_URI: https://dev-mdminhaj.herokuapp.com/api/contact
       - name: exporting to create SSG...
         run: yarn export
       - name: No nojekyll
