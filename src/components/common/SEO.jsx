@@ -47,6 +47,11 @@ const SEO = ({ pageTitle }) => {
       <meta property="fb:app_id" content={fbAppId} />
       <link rel="canonical" href={url} />
       <link rel="icon" type="image/png" sizes="48x48" href={favicon} />
+      {/* Google Verify */}
+      <meta
+        name="google-site-verification"
+        content="el6jVLbKklKeLv68mkHW945_p4gcTEgcUKt6I9pNBPI"
+      />
     </>
   );
 };
