@@ -33,7 +33,10 @@ const SEO = ({ pageTitle }) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={author} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta
+        name="twitter:image"
+        content="https://dev-mdminhaj.github.io/logo.png"
+      />
       <meta name="twitter:creator" content={twitterSiteUsername} />
       <meta name="twitter:image:alt" content={altForImage} />
       <meta name="twitter:site" content={twitterSiteUsername} />
