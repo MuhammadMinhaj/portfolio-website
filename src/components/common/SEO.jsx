@@ -30,13 +30,14 @@ const SEO = ({ pageTitle }) => {
       <meta name="robots" content="index, follow" />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={author} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:creator" content={twitterSiteUsername} />
       <meta name="twitter:image:alt" content={altForImage} />
       <meta name="twitter:site" content={twitterSiteUsername} />
-      <meta name="twitter:card" content={description} />
+
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
