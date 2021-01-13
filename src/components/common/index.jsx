@@ -108,7 +108,11 @@ export const Logo = () => (
     <div className={styled.logo}>
       <div className={styled.inner}>
         <div className={styled.content}>
-          <img src="/logo.png" alt="M" width="90%" />
+          <img
+            src="/logo.png"
+            alt="Muhammad Minhaj || Full Stack Software Developer"
+            width="90%"
+          />
         </div>
       </div>
     </div>

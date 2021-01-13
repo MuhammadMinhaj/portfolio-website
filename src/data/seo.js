@@ -8,9 +8,9 @@
 const seo = {
   title: "Muhammad Minhaj",
   description:
-    "Hey! I'm Muhammad Minhaj, a  full-stack Javascript developer. I develop web and mobile-based applications. I love to do learn new things and upgrade my skill.",
+    "Hey! I'm Muhammad Minhaj, a full-stack software developer. I develop mobile and web-based applications using javascript. I always improve my skill with new technology.",
 
-  keywords: "Muhammad Minhaj,Md Minhaj,Portfolio,Website,Developer",
+  keywords: "Muhammad Minhaj,Md Minhaj,Portfolio,Website,Developer,Javascript",
   url: "https://dev-mdminhaj.github.io",
   altForImage: "Muhammad Minhaj",
   siteName: "dev-mdminhaj",

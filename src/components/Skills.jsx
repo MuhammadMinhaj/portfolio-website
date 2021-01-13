@@ -123,9 +123,9 @@ function ColorlibStepIcon(props) {
   );
 }
 
-const SkillInnerItem = ({ iconSrc, text, ind }) => {
+const SkillInnerItem = ({ iconSrc, text, ind, title }) => {
   const dispatch = useDispatch();
-  const isMobileDevice = useMediaQuery("(max-width:576px)");
+  // const isMobileDevice = useMediaQuery("(max-width:576px)");
   return (
     <Grow in>
       <div className={styled.item}>
@@ -136,7 +136,12 @@ const SkillInnerItem = ({ iconSrc, text, ind }) => {
             width={100}
             height={isMobileDevice ? 80 : 60}
           /> */}
-          <img src={iconSrc} width="100%" height="100%" alt="Icon" />
+          <img
+            src={iconSrc}
+            width="100%"
+            height="100%"
+            alt={`Muhammad Minhaj Skill On ${title}`}
+          />
         </div>
         <div className={styled.content}>
           <h1>{text}</h1>
@@ -180,7 +185,7 @@ const SkillsItem = () => {
                 src={skillList[activeStep][index].src}
                 width={250}
                 height={100}
-                alt={skillList[activeStep][index].title}
+                alt={`Muhammad Minhaj Skill On ${skillList[activeStep][index].title}`}
               />
               <h2>{skillList[activeStep][index].title}</h2>
 
@@ -210,6 +215,7 @@ const SkillsItem = () => {
                 iconSrc={skill.src}
                 text={skill.progress}
                 ind={ind}
+                title={skill.title || ""}
               />
             )
         )}
@@ -228,6 +234,7 @@ const SkillsItem = () => {
                 iconSrc={skill.src}
                 text={skill.progress}
                 ind={ind}
+                title={skill.title || ""}
               />
             )
         )}

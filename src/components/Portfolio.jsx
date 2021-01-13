@@ -87,7 +87,7 @@ const PortfolioCard = ({
               <CardMedia
                 className={styled.cardMedia}
                 image={thumbnail}
-                title="Thumbnail"
+                title="Muhammad Minhaj || Portfolio Demo"
               />
             )}
             {/* {thumbnail && (
