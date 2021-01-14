@@ -28,7 +28,7 @@ const Slider = () => {
         </span>
         <span className={styled.title1}>I'm</span>
 
-        <h1 className={styled.title2}>Md. Minhaj</h1>
+        <h1 className={styled.title2}>Muhammad Minhaj</h1>
         <Typography color="secondary" variant="h5" component="h2">
           A Full Stack Developer
         </Typography>
