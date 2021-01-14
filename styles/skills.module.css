@@ -25,11 +25,14 @@
   z-index: -999;
   transform: rotate(-45deg);
   color: var(--muted);
+  font-weight: bold;
 }
 
-.description > h2 {
+.description > span {
   margin-bottom: 0.5rem;
   color: var(--text);
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .skillsContainer .line {
@@ -40,10 +43,12 @@
   justify-content: center;
   align-items: center;
 }
-.skillsContainer .line > h1 {
+.skillsContainer .line > span {
   transform: rotate(90deg);
   letter-spacing: 20px;
   color: var(--muted);
+  font-weight: bold;
+  font-size: 1.17rem;
 }
 .skillsContainer .left,
 .right {
@@ -108,10 +113,12 @@
   align-items: center;
   border-radius: 0.75rem;
 }
-.skillsContainer .left .item .content > h1,
-.right .item .content > h1 {
+.skillsContainer .left .item .content > span,
+.right .item .content > span {
   margin-left: 20%;
   color: var(--text);
+  font-size: 1.17em;
+  font-weight: bold;
 }
 .skillsContainer .left .item .content {
   right: 50%;
@@ -120,7 +127,7 @@
   left: 50%;
   justify-content: flex-end;
 }
-.skillsContainer .right .item .content > h1 {
+.skillsContainer .right .item .content > span {
   margin-right: 20%;
 }
 .skillsBtnContainer {

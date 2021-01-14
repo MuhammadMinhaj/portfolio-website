@@ -40,19 +40,19 @@ const Home = () => {
         {/* Slider */}
         <Slider />
         {/* About Me */}
-        <Title id="about" element="h1" title="ABOUT" subTitle="ME" />
+        <Title id="about" element="h2" title="ABOUT" subTitle="ME" />
         <About />
         {/* My Skills */}
-        <Title id="skills" element="h1" title="MY" subTitle="SKILLS" />
+        <Title id="skills" element="h2" title="MY" subTitle="SKILLS" />
         <Skills />
         {/* My Portfolio */}
-        <Title id="portfolio" element="h1" title="MY" subTitle="PORTFOLIO" />
+        <Title id="portfolio" element="h2" title="MY" subTitle="PORTFOLIO" />
         <Portfolio />
         {/* Services */}
-        <Title id="services" element="h1" title="Expected On" subTitle=" Me" />
+        <Title id="services" element="h2" title="Expected On" subTitle=" Me" />
         <Services />
         {/* Contact */}
-        <Title id="contact" element="h1" title="CONTACT" subTitle="ME" />
+        <Title id="contact" element="h2" title="CONTACT" subTitle="ME" />
         <Contact />
       </Layout>
     </>

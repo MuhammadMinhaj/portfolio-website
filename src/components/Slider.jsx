@@ -16,17 +16,25 @@ const Slider = () => {
   return (
     <section>
       <div className={styled.slider}>
-        <h3 style={{ lineHeight: "2" }}>Hey there!</h3>
-        <h1 className={styled.title1}>I'm</h1>
+        <span
+          style={{
+            lineHeight: "2",
+            display: "block",
+            fontSize: "1.17em",
+            fontWeight: "600",
+          }}
+        >
+          Hey there!
+        </span>
+        <span className={styled.title1}>I'm</span>
 
         <h1 className={styled.title2}>Md. Minhaj</h1>
-        <Typography color="secondary" variant="h5">
+        <Typography color="secondary" variant="h5" component="h2">
           A Full Stack Developer
         </Typography>
-        <Typography variant="overline">
+        <Typography variant="overline" component="h3">
           Web Developer & Apps Developer & Programmer
         </Typography>
-        <br />
         <br />
         <Typography variant="h6" color="secondary">
           Follow Me

@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <SEO pageTitle="Muhammad Minhaj || Full Stack Developer" />
+          <SEO pageTitle="Muhammad Minhaj || Full Stack Software Developer" />
           {/* Global site tag (gtag.js) - Google Analytics */}
           <script
             async

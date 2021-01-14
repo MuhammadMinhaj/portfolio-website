@@ -144,7 +144,7 @@ const SkillInnerItem = ({ iconSrc, text, ind, title }) => {
           />
         </div>
         <div className={styled.content}>
-          <h1>{text}</h1>
+          <span>{text}</span>
         </div>
       </div>
     </Grow>
@@ -171,9 +171,9 @@ const SkillsItem = () => {
                   <CloseIcon />
                 </IconButton>
               </div>
-              <h1 className={styled.backgroundTitle}>
+              <span className={styled.backgroundTitle}>
                 {skillList[activeStep][index].progress}
-              </h1>
+              </span>
 
               {/* <Image
                 src={skillList[activeStep][index].src}
@@ -187,7 +187,7 @@ const SkillsItem = () => {
                 height={100}
                 alt={`Muhammad Minhaj Skill On ${skillList[activeStep][index].title}`}
               />
-              <h2>{skillList[activeStep][index].title}</h2>
+              <span>{skillList[activeStep][index].title}</span>
 
               <p>{skillList[activeStep][index].text}</p>
 
@@ -222,7 +222,7 @@ const SkillsItem = () => {
       </div>
 
       <div className={styled.line}>
-        <h1>SKILLS</h1>
+        <span>SKILLS</span>
       </div>
 
       <div className={styled.right}>
