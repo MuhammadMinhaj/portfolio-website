@@ -57,6 +57,7 @@ const SEO = ({ pageTitle }) => {
         name="google-site-verification"
         content="AXHFqtiVvlf3_x1Ui2xvKy9aCmzi7OLuIewDgv7LO5E"
       />
+      <meta name="msvalidate.01" content="0E2819BDDC35A9B0CB08E8B2641E9608" />
     </>
   );
 };
