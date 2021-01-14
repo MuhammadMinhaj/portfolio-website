@@ -27,10 +27,10 @@ jobs:
       - name: Installing project dependencies...
         run: yarn install
       - name: Building project...
-        run: yarn build
         env:
-          NEXT_PUBLIC_API_KEY: developer@mdminhaj24ctg24&&mdminhaj-portfolio-web-api
-          NEXT_PUBLIC_CONTACT_API_URI: https://dev-mdminhaj.herokuapp.com/api/contact
+          NEXT_PUBLIC_API_KEY: ${{ secrets.API_KEY }}
+          NEXT_PUBLIC_CONTACT_API_URI: ${{ secrets.CONTACT_API_URI }}
+        run: yarn build
       - name: exporting to create SSG...
         run: yarn export
       - name: No nojekyll
