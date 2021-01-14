@@ -27,9 +27,9 @@ jobs:
       - name: Installing project dependencies...
         run: yarn install
       - name: Building project...
-        env:
-          PUBLIC_API_KEY: ${{ secrets.API_KEY }}
-          PUBLIC_CONTACT_API_URI: ${{ secrets.CONTACT_API_URI }}
+        with:
+          NEXT_PUBLIC_API_KEY: ${{ secrets.API_KEY }}
+          NEXT_PUBLIC_CONTACT_API_URI: ${{ secrets.CONTACT_API_URI }}
         run: yarn build
       - name: exporting to create SSG...
         run: yarn export
