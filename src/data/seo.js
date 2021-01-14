@@ -9,12 +9,11 @@ const seo = {
   title: "Muhammad Minhaj || Full Stack Developer",
   description:
     "Hey! I'm Muhammad Minhaj, a full-stack software developer. I develop mobile and web-based applications using javascript. I always improve my skill with new technology.",
-
   keywords:
     "Muhammad Minhaj,Md Minhaj,Full Stack Developer,Full Stack Javascript Developer",
   url: "https://dev-mdminhaj.github.io",
   altForImage: "Muhammad Minhaj",
-  siteName: "dev-mdminhaj",
+  siteName: "dev-mdminhaj.github.io",
   fbAppId: "3242641772502117",
   twitterSiteUsername: "@dev_mdminhaj",
   author: "Muhammad Minhaj",

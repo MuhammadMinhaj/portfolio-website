@@ -28,6 +28,9 @@ jobs:
         run: yarn install
       - name: Building project...
         run: yarn build
+        env:
+          NEXT_PUBLIC_API_KEY: ${{ secrets.API_KEY }}
+          NEXT_PUBLIC_CONTACT_API_URI: ${{ secrets.CONTACT_API_URI }}
       - name: exporting to create SSG...
         run: yarn export
       - name: No nojekyll
