@@ -9,6 +9,21 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <SEO pageTitle="Muhammad Minhaj || Full Stack Developer" />
+          {/* Global site tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-8VBJLZ8K8V"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-8VBJLZ8K8V');
+        `,
+            }}
+          />
         </Head>
         <body>
           <Main />
