@@ -29,7 +29,6 @@ const Home = () => {
   const dispatch = useDispatch();
   return (
     <>
-     
       <Loader open={loader.isLoading} message={loader.message} />
       <AlertMessage
         open={message ? true : false}
