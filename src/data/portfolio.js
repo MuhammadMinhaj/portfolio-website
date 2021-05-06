@@ -51,7 +51,21 @@ let makeWebData = (n) => {
 const portfolio = [
   {
     name: "Web Apps",
-    projects: makeWebData(15),
+    projects: [
+      createPortfolioObject(
+        `02-02-2021`,
+        `N/A`,
+        "/static/images/informativecoding.png",
+        "https://informativecoding.github.io",
+        "https://github.com/InformativeCoding",
+        "Non-Profit Organization",
+        `Informative Coding`,
+        "JavaScript,ReactJS,NextJs,Material-UI",
+        "N/A",
+        "Informative Coding",
+        "Informative Coding is a non-profit organization for learning programming-related topics. All content here is based on Javascript. This platform is created by Muhammad Minhaj."
+      )
+    ],
   },
   {
     name: "Mobile Apps",

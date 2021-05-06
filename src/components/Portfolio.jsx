@@ -6,40 +6,50 @@
  * **/
 
 // Included third pertty packages or components
-import { useState } from "react";
-// import Image from "next/image";
-import PropTypes from "prop-types";
 import {
-  Tabs,
-  Tab,
-  Typography,
   Box,
-  useMediaQuery,
-  Card,
-  CardMedia,
+
+
+
+
+
+
+  Button, Card,
+
   CardActionArea,
   CardActions,
-  CardContent,
-  Button,
-  Grid,
-  Chip,
-  Grow,
+  CardContent, CardMedia,
+
+
+
+
+
+  Chip, Grid,
+
+  Grow, Tab, Tabs,
+
+  Typography,
+
+  useMediaQuery
 } from "@material-ui/core";
-import { Pagination } from "@material-ui/lab";
 // Included Material-Icons
 import {
   GitHub as GitHubIcon,
-  VisibilityOff as VisibilityOffIcon,
-  Public as PublicIcon,
+
+  Public as PublicIcon, VisibilityOff as VisibilityOffIcon
 } from "@material-ui/icons";
-
-// Included custom packages or components or others...
-import styled from "../../styles/portfolio.module.css";
-
+import { Pagination } from "@material-ui/lab";
+// import Image from "next/image";
+import PropTypes from "prop-types";
+import { useState } from "react";
 // Add redux actions
 import app from "../../redux/actions/app";
+// Included custom packages or components or others...
+import styled from "../../styles/portfolio.module.css";
 // Included Portfolio Data
 import data from "../data";
+
+
 
 const { getFilterArray, getTotalPageNumber } = app.portfolio;
 const { portfolio } = data;
@@ -49,7 +59,7 @@ const InfoText = ({ name, value, isDescription }) => (
     <Typography variant="overline">{name}: </Typography>
     {isDescription ? (
       <Typography variant="body2" style={{ color: "#d5d5d5" }}>
-        {value.length > 150 ? value.slice(0, 150) + "..." : value}
+        {value.length > 200 ? value.slice(0, 200) + "..." : value}
       </Typography>
     ) : (
       value
