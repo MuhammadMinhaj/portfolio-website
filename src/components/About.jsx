@@ -7,11 +7,11 @@
 
 //  Included Third Pertty Components Or Packages
 // import Image from "next/image";
-import { Grid, Typography, Button } from "@material-ui/core";
-// Included Custom Packages or Components
-import { SmoothScrollLink } from "./common";
+import { Button, Grid, Typography } from "@material-ui/core";
 import styled from "../../styles/about.module.css";
 import data from "../data";
+// Included Custom Packages or Components
+import { SmoothScrollLink } from "./common";
 
 const { imgSource, text } = data.about;
 
@@ -42,9 +42,9 @@ const Slider = () => {
         </Grid>
         <Grid item sm={6}>
           <div className={styled.about__text}>
-            <Typography paragraph>{text}</Typography>
+            <Typography variant="h6">{text}</Typography>
 
-            <div className={styled.button__wrapper}></div>
+            <div className={styled.button__wrapper}>
             <Button
               color="secondary"
               variant="contained"
@@ -58,6 +58,7 @@ const Slider = () => {
                 My Skill
               </Button>
             </SmoothScrollLink>
+            </div>
           </div>
         </Grid>
       </Grid>

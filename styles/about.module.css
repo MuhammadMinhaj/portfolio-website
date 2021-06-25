@@ -5,13 +5,13 @@
   border-radius: 1rem;
 }
 .about__section .about__text .button__wrapper {
-  margin-top: 1rem;
+  margin-top: 1.75rem;
 }
 
 .about__section .about__img_wrapper {
   margin: auto;
-  max-width: 350px;
-  max-height: 380px;
+  max-width: 400px;
+  max-height: 520px;
   overflow: hidden;
   border-radius: 1rem;
   border: 2px solid #fafafa21 !important;
@@ -26,12 +26,6 @@
   transform: scale(1.2);
   transition: all 1s;
   filter: grayscale(25%);
-}
-
-@media only screen and (max-width: 900px) {
-  .about__section .about__text .button__wrapper {
-    margin-top: 0rem;
-  }
 }
 
 @media only screen and (max-width: 576px) {
