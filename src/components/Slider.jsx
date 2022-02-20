@@ -6,12 +6,12 @@
  * **/
 
 //  Included Third Pertty Components Or Packages
-import { Typography, Button } from "@material-ui/core";
-
+import { Button, Typography } from "@material-ui/core";
 // Included Custom Packages or Components
 import styled from "../../styles/slider.module.css";
 import { SmoothScrollLink } from "./common";
 import SocialMedia from "./Social";
+
 const Slider = () => {
   return (
     <section>
@@ -30,7 +30,7 @@ const Slider = () => {
 
         <h1 className={styled.title2}>Muhammad Minhaj</h1>
         <Typography color="secondary" variant="h5" component="h2">
-          A Full Stack Developer
+          Full-Stack Web & Mobile Applications Developer
         </Typography>
         <Typography variant="overline" component="h3">
           Web Developer & Apps Developer & Programmer
@@ -46,6 +46,8 @@ const Slider = () => {
           color="secondary"
           style={{ marginRight: "0.5rem" }}
           size="large"
+          href="https://muhammadminhaj.github.io"
+          target="_blank"
         >
           Get Resum
         </Button>

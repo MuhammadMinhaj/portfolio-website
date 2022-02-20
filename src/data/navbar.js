@@ -23,7 +23,7 @@ const navbar = [
   createNavbarObject("Portfolio", "#portfolio"),
   createNavbarObject("Expected", "#services"),
   createNavbarObject("Contact", "#contact"),
-  createNavbarObject("Blog", "https://dev-mdminhaj.github.io/blog"),
+  createNavbarObject("Blog", "https://github.com/MuhammadMinhaj"),
 ];
 
 export default navbar;

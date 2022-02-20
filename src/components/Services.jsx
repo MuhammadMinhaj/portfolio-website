@@ -6,30 +6,26 @@
  * **/
 
 //  Included Third Pertty Components Or Packages
-import { makeStyles } from "@material-ui/core/styles";
-import { Paper, Grow, Typography, Divider } from "@material-ui/core";
-
-import {
-  Timeline,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineConnector,
-  TimelineContent,
-  TimelineOppositeContent,
-  TimelineDot,
-} from "@material-ui/lab";
-
+import { Grow, Paper, Typography } from "@material-ui/core";
 // Imported Icons
 import {
-  Web as WebIcon,
+  Apple as AppleIcon,
   Code as CodeIcon,
   DeveloperMode as DeveloperModeIcon,
-  Apple as AppleIcon,
   Error as ErrorIcon,
-  Speed as SpeedIcon,
   Public as PublicIcon,
+  Speed as SpeedIcon,
+  Web as WebIcon,
 } from "@material-ui/icons";
-
+import {
+  Timeline,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+  TimelineItem,
+  TimelineOppositeContent,
+  TimelineSeparator,
+} from "@material-ui/lab";
 import styled from "../../styles/services.module.css";
 
 const ItemOfTimeLine = ({

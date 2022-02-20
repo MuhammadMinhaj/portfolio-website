@@ -7,15 +7,15 @@
 
 //  Included Third Pertty Components Or Packages
 import {
+  Button,
   Container,
   Typography,
-  Button,
   useMediaQuery,
 } from "@material-ui/core";
 // Included Custom Packages or Componet or Others...
 import styled from "../../styles/footer.module.css";
-import SocialLinks from "./Social";
 import { Logo } from "./common";
+import SocialLinks from "./Social";
 const Social = () => (
   <div className={styled.social}>
     <Typography variant="button">Follow Me</Typography>
@@ -28,7 +28,14 @@ const CopyRight = () => (
       Thank You
     </Typography>
     <Typography variant="button" display="block" align="center">
-      Developed By Muhammad Minhaj
+      Developed By{" "}
+      <Typography
+        component="a"
+        href="https://github.com/MuhammadMinhaj"
+        target="_blank"
+      >
+        Muhammad Minhaj
+      </Typography>
     </Typography>
   </div>
 );
@@ -45,6 +52,8 @@ const Footer = () => {
               color="secondary"
               variant="outlined"
               size={isMobileDevices ? "large" : "small"}
+              href="https://muhammadminhaj.github.io"
+              target="_blank"
             >
               Get Resume
             </Button>

@@ -10,9 +10,9 @@ import { IconButton } from "@material-ui/core";
 import {
   Facebook as FacebookIcon,
   GitHub as GitHubIcon,
+  Instagram as InstagramIcon,
   LinkedIn as LinkedInIcon,
   Twitter as TwitterIcon,
-  Instagram as InstagramIcon,
 } from "@material-ui/icons";
 // Included Custom Packages or Components
 
@@ -23,11 +23,11 @@ function createObject(icon, link) {
   };
 }
 const socialIcons = [
-  createObject(FacebookIcon, "https://facebook.com/dev.mdminhaj"),
-  createObject(GitHubIcon, "https://github.com/dev-mdminhaj"),
-  createObject(LinkedInIcon, "https://linkedin.com/in/dev-mdminhaj"),
-  createObject(TwitterIcon, "https://twitter.com/dev_mdminhaj"),
-  createObject(InstagramIcon, "https://www.instagram.com/dev_mdminhaj"),
+  createObject(FacebookIcon, "https://facebook.com/MuhammadMinhaj2"),
+  createObject(GitHubIcon, "https://github.com/MuhammadMinhaj"),
+  createObject(LinkedInIcon, "https://linkedin.com/in/Muhammad-Minhaj"),
+  createObject(TwitterIcon, "https://twitter.com/withMinhaj"),
+  createObject(InstagramIcon, "https://www.instagram.com/MuhammadMinhaj"),
 ];
 const SocialMedia = (props) => {
   return (

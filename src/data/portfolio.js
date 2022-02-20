@@ -36,14 +36,14 @@ let makeWebData = (n) => {
         `0${i + 1}/0${i + 1}/2021`,
         `${i}days`,
         "/static/images/default-thumbnail.jpg",
-        "https://demo-project.com",
-        "https://github.com/dev-mdminhaj",
+        "https://muhammadminhaj.github.io",
+        "https://github.com/MuhammadMinhaj",
         "Information & Technology",
         `Demo(${i + 1})`,
-        "NextJs,ReactJs",
+        "NodeJs, NestJs, NextJs, ReactJs",
         "Demo",
         "Demo",
-        "This is just demo it's not a project"
+        "This is just a demo item, not a real website or project. All projects are available on https://muhammadminhaj.github.io. Thanks"
       );
     });
 };
@@ -51,29 +51,15 @@ let makeWebData = (n) => {
 const portfolio = [
   {
     name: "Web Apps",
-    projects: [
-      createPortfolioObject(
-        `02-02-2021`,
-        `N/A`,
-        "/static/images/informativecoding.png",
-        "https://informativecoding.github.io",
-        "https://github.com/InformativeCoding",
-        "Non-Profit Organization",
-        `Informative Coding`,
-        "JavaScript,ReactJS,NextJs,Material-UI",
-        "N/A",
-        "Informative Coding",
-        "Informative Coding is a non-profit organization for learning programming-related topics. All content here is based on Javascript. This platform is created by Muhammad Minhaj."
-      )
-    ],
+    projects: [...makeWebData(6)],
   },
   {
     name: "Mobile Apps",
-    projects: makeWebData(3),
+    projects: makeWebData(2),
   },
   {
     name: "Desktop Software",
-    projects: makeWebData(12),
+    projects: makeWebData(3),
   },
   {
     name: "Others apps",

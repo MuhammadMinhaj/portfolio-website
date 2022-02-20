@@ -20,7 +20,6 @@ const Slider = () => {
     <section className={styled.about__section}>
       <Grid container>
         <Grid item sm={6} style={{ width: "100%" }}>
-          
           <div className={styled.about__img_wrapper}>
             {/* <Image
               src={imgSource}
@@ -38,26 +37,27 @@ const Slider = () => {
               className={styled.about__img}
             />
           </div>
-      
         </Grid>
         <Grid item sm={6}>
           <div className={styled.about__text}>
             <Typography variant="h6">{text}</Typography>
 
             <div className={styled.button__wrapper}>
-            <Button
-              color="secondary"
-              variant="contained"
-              style={{ marginRight: "0.5rem" }}
-              size="large"
-            >
-              Get Resume
-            </Button>
-            <SmoothScrollLink to="skills">
-              <Button size="large" color="secondary" variant="outlined">
-                My Skill
+              <Button
+                color="secondary"
+                variant="contained"
+                style={{ marginRight: "0.5rem" }}
+                size="large"
+                href="https://muhammadminhaj.github.io"
+                target="_blank"
+              >
+                Get Resume
               </Button>
-            </SmoothScrollLink>
+              <SmoothScrollLink to="skills">
+                <Button size="large" color="secondary" variant="outlined">
+                  My Skill
+                </Button>
+              </SmoothScrollLink>
             </div>
           </div>
         </Grid>

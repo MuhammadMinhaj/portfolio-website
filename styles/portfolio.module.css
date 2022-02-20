@@ -9,6 +9,7 @@
 .card {
   background: #192331 !important;
   color: var(--text) !important;
+  height: 100%;
 }
 .card .cardActions {
   border-top: 1px solid #111a28;

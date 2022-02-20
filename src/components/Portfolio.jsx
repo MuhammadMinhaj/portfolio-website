@@ -8,35 +8,25 @@
 // Included third pertty packages or components
 import {
   Box,
-
-
-
-
-
-
-  Button, Card,
-
+  Button,
+  Card,
   CardActionArea,
   CardActions,
-  CardContent, CardMedia,
-
-
-
-
-
-  Chip, Grid,
-
-  Grow, Tab, Tabs,
-
+  CardContent,
+  CardMedia,
+  Chip,
+  Grid,
+  Grow,
+  Tab,
+  Tabs,
   Typography,
-
-  useMediaQuery
+  useMediaQuery,
 } from "@material-ui/core";
 // Included Material-Icons
 import {
   GitHub as GitHubIcon,
-
-  Public as PublicIcon, VisibilityOff as VisibilityOffIcon
+  Public as PublicIcon,
+  VisibilityOff as VisibilityOffIcon,
 } from "@material-ui/icons";
 import { Pagination } from "@material-ui/lab";
 // import Image from "next/image";
@@ -48,8 +38,6 @@ import app from "../../redux/actions/app";
 import styled from "../../styles/portfolio.module.css";
 // Included Portfolio Data
 import data from "../data";
-
-
 
 const { getFilterArray, getTotalPageNumber } = app.portfolio;
 const { portfolio } = data;

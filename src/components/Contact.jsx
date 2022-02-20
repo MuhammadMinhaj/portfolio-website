@@ -6,29 +6,26 @@
  * **/
 
 //  Included Third Pertty Components Or Packages
-import { useSelector, useDispatch } from "react-redux";
 import {
+  Button,
   Grid,
   TextField,
-  Button,
-  useMediaQuery,
   Typography,
+  useMediaQuery,
 } from "@material-ui/core";
-
 // Included icons of Material-UI
 import {
-  Send as SendIcon,
+  Duo as DuoIcon,
   Email as EmailIcon,
   LocationOn as LocationOnIcon,
   Phone as PhoneIcon,
-  Duo as DuoIcon,
+  Send as SendIcon,
 } from "@material-ui/icons";
-
-// Included Custom Components
-import styled from "../../styles/contact.module.css";
-
+import { useDispatch, useSelector } from "react-redux";
 // Included Redux actions for contact
 import app from "../../redux/actions/app";
+// Included Custom Components
+import styled from "../../styles/contact.module.css";
 
 const { handleChange, handleSubmit } = app.contact;
 
@@ -66,14 +63,10 @@ function createFormFieldsObj(name, label, others) {
 }
 
 const contactLists = [
-  createContactObject(EmailIcon, "~Email", "dev.mdminhaj@gmail.com"),
-  createContactObject(PhoneIcon, "~Phone", "+8801831-137771"),
-  createContactObject(DuoIcon, "~Skype", "@N/A"),
-  createContactObject(
-    LocationOnIcon,
-    "~Address",
-    "Amin Textiles Ltd.-2, Sholashahar,Chittagong,4211,Chittagong, Bangladesh"
-  ),
+  createContactObject(EmailIcon, "~Email", "programmer.mdminhaj@gmail.com"),
+  createContactObject(PhoneIcon, "~Phone", "@N/A"),
+  createContactObject(DuoIcon, "~Skype", "live:.cid.212947cb52acc217"),
+  createContactObject(LocationOnIcon, "~Address", "Chittagong, Bangladesh"),
 ];
 
 const Contact = () => {
