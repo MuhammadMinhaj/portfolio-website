@@ -59,6 +59,10 @@ InfoText.propTypes = {
   value: PropTypes.string.isRequired,
   isDescription: PropTypes.bool,
 };
+const getPath = (path) =>
+  process.env.NODE_ENV === "production"
+    ? `${process.env.REPO_PATH_NAME}/${path}`
+    : path;
 // Portfolio Card
 const PortfolioCard = ({
   project: {
@@ -84,7 +88,7 @@ const PortfolioCard = ({
             {thumbnail && (
               <CardMedia
                 className={styled.cardMedia}
-                image={thumbnail}
+                image={getPath(thumbnail)}
                 title="Muhammad Minhaj || Portfolio Demo"
               />
             )}
