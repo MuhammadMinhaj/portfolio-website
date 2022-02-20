@@ -18,7 +18,7 @@ const seo = {
   twitterSiteUsername: "@dev_mdminhaj",
   author: "Muhammad Minhaj",
   image: "/logo.png",
-  favicon: "/favicon.png",
+  favicon: "/favicon.ico",
 };
 
 export default seo;

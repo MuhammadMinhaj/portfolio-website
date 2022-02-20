@@ -7,39 +7,34 @@
 
 //  Included Third Pertty Components Or Packages
 // import Image from "next/image";
-import { useSelector, useDispatch } from "react-redux";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
 import {
-  Grow,
-  Modal,
-  Stepper,
-  Step,
-  StepLabel,
-  StepConnector,
-  StepButton,
   Button,
+  Grow,
   IconButton,
-  useMediaQuery,
+  Modal,
+  Step,
+  StepButton,
+  StepConnector,
+  StepLabel,
+  Stepper,
 } from "@material-ui/core";
-
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 // Imported Icons
 import {
   Apps as AppsIcon,
-  Web as WebIcon,
   Build as BuildIcon,
-  Language as LanguageIcon,
   ChevronLeft as ChevronLeftIcon,
   ChevronRight as ChevronRightIcon,
   Close as CloseIcon,
+  Language as LanguageIcon,
+  Web as WebIcon,
 } from "@material-ui/icons";
-
-// Included Custom Packages or Components
-import styled from "../../styles/skills.module.css";
-
+import clsx from "clsx";
+import { useDispatch, useSelector } from "react-redux";
 // Imported Actions
 import app from "../../redux/actions/app";
-
+// Included Custom Packages or Components
+import styled from "../../styles/skills.module.css";
 // Import Skills List Data from src/data directory
 import data from "../data";
 
@@ -122,7 +117,10 @@ function ColorlibStepIcon(props) {
     </div>
   );
 }
-
+const getPath = (path) =>
+  process.env.NODE_ENV === "production"
+    ? `${process.env.REPO_PATH_NAME}/${path}`
+    : path;
 const SkillInnerItem = ({ iconSrc, text, ind, title }) => {
   const dispatch = useDispatch();
   // const isMobileDevice = useMediaQuery("(max-width:576px)");
@@ -137,7 +135,7 @@ const SkillInnerItem = ({ iconSrc, text, ind, title }) => {
             height={isMobileDevice ? 80 : 60}
           /> */}
           <img
-            src={iconSrc}
+            src={getPath(iconSrc)}
             width="100%"
             height="100%"
             alt={`Muhammad Minhaj Skill On ${title}`}

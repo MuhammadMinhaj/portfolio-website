@@ -14,7 +14,10 @@ import data from "../data";
 import { SmoothScrollLink } from "./common";
 
 const { imgSource, text } = data.about;
-
+const getPath = (path) =>
+  process.env.NODE_ENV === "production"
+    ? `${process.env.REPO_PATH_NAME}/${path}`
+    : path;
 const Slider = () => {
   return (
     <section className={styled.about__section}>
@@ -32,7 +35,7 @@ const Slider = () => {
             />  */}
 
             <img
-              src={imgSource}
+              src={getPath(imgSource)}
               alt="Muhammad Minhaj || Full Stack Software Developer"
               className={styled.about__img}
             />
