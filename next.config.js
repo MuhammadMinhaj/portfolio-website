@@ -6,6 +6,6 @@ module.exports = {
     CONTACT_SEND_MAIL_URI_POST:
       "https://dev-mdminhaj.herokuapp.com/api/contact",
   },
-  basePath: isProd ? "/portfolio-website" : "",
-  assetPrefix: isProd ? "/portfolio-website" : "",
+  basePath: isProd ? "https://muhammadminhaj.github.io/portfolio" : "",
+  assetPrefix: isProd ? "https://muhammadminhaj.github.io/portfolio" : "",
 };
