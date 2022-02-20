@@ -6,5 +6,7 @@ module.exports = {
     CONTACT_SEND_MAIL_URI_POST:
       "https://dev-mdminhaj.herokuapp.com/api/contact",
   },
-  assetPrefix: isProd ? "https://cdn.mydomain.com" : "",
+  assetPrefix: isProd
+    ? "https://muhammadminhaj.github.io/portfolio-website"
+    : "",
 };
